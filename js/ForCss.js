@@ -4,10 +4,10 @@
 * @Last Modified by:   Marte
 * @Last Modified time: 2017-11-15 17:02:06
 */
-var OHtmlWidth;
-var OHtmlHeight;
-var ODivHeight;
-var OChildWidth;
+var OHtmlWidth ="";
+var OHtmlHeight ="";
+var ODivHeight ="";
+var OChildWidth ="";
 if(/Android|webOS|iPhone|iPad|BlackBerry/i.test(navigator.userAgent)) {
    OHtmlWidth = document.documentElement.clientWidth;//获取屏幕分辨率宽
    OHtmlHeight = document.documentElement.clientHeight;//获取屏幕分辨率高
