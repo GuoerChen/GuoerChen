@@ -1,0 +1,84 @@
+/*
+* @Author: Marte Chen
+* @Date:   2017-11-20 22:28:35
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-11-20 22:32:52
+*/
+ body{width:1366px;height:1366px;background-color:#00c091;text-align: center;}
+        #HBody{margin-top:80px;display: inline-block;width:820px;height:1200px;background-color:white;border-radius:5px;}
+        #dMain{background-size:100% 100%;width:820px;height:1200px;background-image:url("../image/Bg.png");border-radius:5px;}
+        #inhead{height:230px;width:820px;}
+        #inbody{height:860px;width:820px;}
+        #inleft{height:860px;width:545px;float:left;}
+        #indl1{height:150px;width:545px;}
+        #divs{width:150px;height:150px;text-align:center;margin-left:20px;float:left;}
+        #div1{width:140px;height:140px;background-color:#CCC;display:inline-block;margin-top:5px;border-radius: 70px;}
+        #div2{width:128px;height:128px;display:inline-block;margin-top:6px;border-radius: 64px;background-image:url("../image/head.jpg");background-size:100% 100%;}
+        #divt{width:375px;height:150px;float:right;}
+        .divtps{margin:0px;width:355px;text-align:left;margin-left:20px;color:black;}
+        #divtp1{height:80px;line-height:110px;font-size:49px;font-weight:bold;font-family:"宋体";}
+        #divtp2{height:70px;line-height:25px;font-size:13px;font-family:"微软雅黑";}
+
+        #indl2{height:90px;width:545px;}
+        .indl2Top{height:44px;width:545px;text-align: left;}
+        #imgjob{background-image:url("../image/FND_JOB.png");background-size:100% 100%;height:44px;width:44px;margin-left: 22px;display:inline-block;}
+        .joblab1{height:44px;display:inline-block;width:120px;position: absolute;
+                line-height: 44px;margin-left: 10px;font-size: 21px;font-weight: bold;font-family: "微软雅黑";}
+        #joblab2{height:44px;display:inline-block;position: absolute; line-height: 44px;margin-left:100px;width: 160px; font-family: "微软雅黑";  margin-left: 300px;
+            font-size: 25px; font-weight: bold;  color:#196bfb;}
+        .indl2hr1{margin:1px 0px 1px 20px;width:505px;border-width: 0px;height: 1px;background-color:#CCC;}
+        .hrcoy{width:245px;margin-left:-10px;}
+        #indl2Botm{height:10px;width:545px;}
+        #indl2Foot{height:33px;width:545px;text-align: left;}
+        .icaoimg{width:20px;height:20px;margin-top: 6px;margin-left:33px;}
+        .textspan{font-family: 微软雅黑;vertical-align: super;margin-left: 10px;margin-right: 56px;color:#575353;}
+
+        #indl3{height:230px;width:545px;text-align:left;}
+        #imgkills{background-image:url("../image/kills.png");background-size:100% 100%;height:44px;width:44px;margin-left: 22px;display:inline-block;}
+        #viewkill{height:183px;width:545px;}
+        .tul{width: 485px;font-family: 微软雅黑;margin: 0px;color:#575353;}
+        .innerspan{float:right;}
+
+
+        #indl4{height:230px;width:545px;text-align:left;}
+        #imgworks{background-image:url("../image/works2.png");background-size:100% 100%;height:44px;width:44px;margin-left: 22px;display:inline-block;}
+        #viewworks{height:183px;width:545px;}
+        .innerul{padding: 0px 0px 0px 15px;width: 470px;font-family: 微软雅黑;margin: 0px;color:#575353;font-size: 15px;}
+        .edul{}
+        #indl5{height:160px;width:545px;text-align:left;}
+        #imgedus{background-image:url("../image/education.png");background-size:100% 100%;height:44px;width:44px;margin-left: 22px;display:inline-block;}
+
+        #inright{height:860px;width:275px;float:right;}
+        #indr1{height:200px;width:275px;text-align:left;}
+        .tcdiv{height:40px;width:275px;}
+
+        .indrTop{height:44px;width:275px;text-align: left;}
+        #imgifor{background-image:url("../image/information.png");background-size:100% 100%;height:44px;width:44px;margin-left: 22px;display:inline-block;}
+        .jobrab1{height:44px;display:inline-block;width:120px;position: absolute;
+                line-height: 44px;margin-left: 10px;font-size: 21px;font-weight: bold;font-family: "微软雅黑";}
+        .indrhr{margin:1px 0px 1px 20px;width:235px;border-width: 0px;height: 1px;background-color:#CCC;}
+
+
+        .rul{width: 225px;font-family: 微软雅黑;margin: 0px;color:#575353;list-style:none;padding: 0px;margin-left: 25px;}
+        .rimg{height:22px;width:22px;display:inline-block;vertical-align:top;margin-top: 2px;}
+        .inforspan{height: 22px;line-height: 25px;margin-left: 10px;}
+        .last{margin-right: 20px;}
+
+
+        #indr2{height:200px;width:275px;text-align:left;}
+        #imgaihao{background-image:url("../image/aihao.png");background-size:100% 100%;height:44px;width:44px;margin-left: 22px;display:inline-block;}
+        .ahli{height: 45px;margin-top: 25px;}
+        .ahlr{height: 25px;margin-top: 25px;}
+        .ahimg{margin-left:25px;}
+
+
+        #indr3{height:230px;width:275px;text-align:left;}
+        #imgaiblog{background-image:url("../image/cart.png");background-size:100% 100%;height:44px;width:44px;margin-left: 22px;display:inline-block;}
+        .atogit{font-size: 13px;text-decoration: none;color: blue;cursor: pointer;}
+
+        #indr4{height:230px;width:275px;text-align:left;}
+        #imgedit{background-image:url("../image/edit.png");background-size:100% 100%;height:44px;width:44px;margin-left: 22px;display:inline-block;}
+
+
+
+        #infoot{height:110px;width:820px;text-align:center;line-height:110px;font-family:"微软雅黑";}
