@@ -26,7 +26,7 @@
                 line-height: 44px;margin-left: 10px;font-size: 21px;font-weight: bold;font-family: "微软雅黑";}
         #joblab2{height:44px;display:inline-block;position: absolute; line-height: 44px;margin-left:100px;width: 160px; font-family: "微软雅黑";  margin-left: 300px;
             font-size: 25px; font-weight: bold;  color:#196bfb;}
-        .indl2hr1{margin:1px 0px 1px 20px;width:505px;border-width: 0px;height: 1px;background-color:#CCC;}
+        .indl2hr1{margin:1px 0px 1px 20px;width:505px;border-width: 0px;height: 1px;background-color:#5d5959;}
         .hrcoy{width:245px;margin-left:-10px;}
         #indl2Botm{height:10px;width:545px;}
         #indl2Foot{height:33px;width:545px;text-align: left;}
@@ -56,7 +56,7 @@
         #imgifor{background-image:url("../image/information.png");background-size:100% 100%;height:44px;width:44px;margin-left: 22px;display:inline-block;}
         .jobrab1{height:44px;display:inline-block;width:120px;position: absolute;
                 line-height: 44px;margin-left: 10px;font-size: 21px;font-weight: bold;font-family: "微软雅黑";}
-        .indrhr{margin:1px 0px 1px 20px;width:235px;border-width: 0px;height: 1px;background-color:#CCC;}
+        .indrhr{margin:1px 0px 1px 20px;width:235px;border-width: 0px;height: 1px;background-color:#5d5959;}
 
 
         .rul{width: 225px;font-family: 微软雅黑;margin: 0px;color:#575353;list-style:none;padding: 0px;margin-left: 25px;}
