@@ -20,7 +20,7 @@
 
         #search{width:1000px;height:100px;}
         #isearch{margin-left: 34px;width: 450px;height: 36px;margin-top: 20px;border: 1px solid antiquewhite;padding-left: 15px;}
-        #sbtn{width:87px;height: 40px;background-color:orange;border: 1px solid antiquewhite;background-image:url("image/search.png");background-repeat: no-repeat;background-position: center;vertical-align: bottom;}
+        #sbtn{width:87px;height: 40px;background-color:orange;border: 1px solid antiquewhite;background-image:url("../image/search.png");background-repeat: no-repeat;background-position: center;vertical-align: bottom;}
 
         #dBody{width:1366px;height:1275px;background-color:white;}
         #dBody1{width:1000px;height:1275px;margin:0 auto;}
@@ -55,7 +55,7 @@
         .houseview{width:800px;height:187px;cursor:pointer;}
         .hrtop{margin: 0px;width: 800px;border-width: 0px;height: 1px;background-color:#d2caca;}
         .divbottom{width: 800px;height:150px;margin:18px 0px;}
-        .divleft{float:left;width:248px;height:148px;background-image:url("image/pic_2.jpg");border:1px solid #CCC;background-size:100% 100%;}
+        .divleft{float:left;width:248px;height:148px;border:1px solid #CCC;background-size:100% 100%;}
         .divright{float:right;width:550px;height:150px;}
         .p1,.p2,.p3,.p4,.p5{padding:0px;margin:0px 0px 0px 20px;height:30px;width:530px;}
         .p1{font-weight:bold;font-family:"微软雅黑";font-size:19px;color:black;}
