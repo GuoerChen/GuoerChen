@@ -2,7 +2,7 @@
 * @Author: chenzhen
 * @Date:   2017-11-15 13:35:23
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-15 13:36:05
+* @Last Modified time: 2017-11-24 00:02:37
 */
 //定义文字
 var xLabel = "Copyright © 深圳奶爸科技有限公司 粤ICP备14091639号";
@@ -18,9 +18,11 @@ $("#ph2").html(xP2);
 var oJson = [{"a":"image/pic_1.jpg","b":"375","c":"富豪山庄第一街","d":"3室2厅","e":"134.5"},
             {"a":"image/pic_2.jpg","b":"370","c":"花镜新城6期","d":"2室2厅","e":"130.5"},
             {"a":"image/pic_3.jpg","b":"238","c":"阳光小区","d":"3室2厅","e":"190.5"},
+            {"a":"image/pic_4.jpg","b":"395","c":"武汉皇家植树","d":"3室1厅","e":"222.5"},
+            {"a":"image/pic_3.jpg","b":"238","c":"阳光小区","d":"3室2厅","e":"190.5"},
             {"a":"image/pic_4.jpg","b":"395","c":"武汉皇家植树","d":"3室1厅","e":"222.5"}];
 
- for(var i = 0 ; i < oJson.length;i++)
+ for(var i = 0 ; i < 4;i++)
             {   $("#tp1").append('<a href="http://www.baidu.com" target="blank" class = "Toa">'+'</a>');
                 $(".Toa").eq(i).append('<div class = "inDivs">'+'</div>');
                 $(".inDivs").eq(i).append('<div class = "inDivs1">'+'</div>');
@@ -37,10 +39,16 @@ $("#loginbtn").click(function(){
 $("li").eq(0).click(function(){
     window.location.href="YunOffice.html";
     })
-$("li").not(0).click(function(){
-    alert("网页还没做！！！");
+
+$("li").eq(1).click(function(){
+    setTimeout(function(){
+        window.location.href="Rental.html";
+    },1000);
     })
 
+$("li").eq(2).click(function(){
+    alert("网页还没做！！！");
+    })
 
 for (var i = 0;i<($("li").length);i++)
 {

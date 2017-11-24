@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Rental</title>
+    <link rel="stylesheet" type="text/css" href="css/Rental.css" />
+</head>
+<body>
+<div id = "dHead">
+    <div id = "dHead1">
+        <div id ="dHead1a">
+            <ul class = "dHeadul">
+                <li id = "mainpage">首页</li>
+                <li id = "rental">租房</li>
+                <li>二手房</li>
+            </ul>
+        </div>
+    </div>
+    <div id = "dHead2">
+        <div id ="dHead2a">
+            <div id = "icon">
+                <img id = "icon_image" src="image/logo2.png" alt="no icon" name = "icon" />
+                <label for="icon" id = "iconlabel" >在售</label>
+            </div>
+            <div id = "search">
+                <input type="text" id = "isearch" placeholder="请输入区域、商圈、或小区名进行找房" /><input type="submit" value = "" onclick="alert('hahaha')" id = "sbtn"/>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id = "dBody">
+    <div id = "dBody1">
+    <div id = "dBody1a">
+    <p class = "selectp"><label class = "sellab">位置</label><span class = "span1">江夏</span><span class = "span1">洪山</span><span class = "span1">武昌</span><span class = "span1">汉口</span><span class = "span1">青山</span></p>
+    <hr id = "ihr"/>
+    <p class = "selectp"><label class = "sellab">售价</label>
+
+    <span class = "intospan intospan1"><input type="checkbox" /><label class = "chicelab">500以下</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">500 - 1000元</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">1000 - 1500元</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">1500 - 2000元</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">2000 - 3000元</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">3000 - 4000元</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">5000元以上</label></span>
+
+    </p>
+    <p class = "selectp"><label class = "sellab">面积</label>
+
+
+    <span class = "intospan intospan1"><input type="checkbox" /><label class = "chicelab">40平以下</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">40 - 60平米</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">60 - 80平米</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">80 - 100平米</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">100 - 120平米</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">120 - 140平米</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">140平以上</label></span>
+
+
+    </p>
+    <p class = "selectp"><label class = "sellab">房型</label>
+
+ <span class = "intospan intospan1"><input type="checkbox" /><label class = "chicelab">一室</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">二室</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">三室</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">四室</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">五室</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">五室以上</label></span>
+
+
+
+    </p>
+    </div>
+    <div id = "dBody1b">
+    <ul class = "dHeadul1">
+                <li id = "il2s1">默认排序</li>
+                <li>最新</li>
+                <li>总价</li>
+                <li>单价</li>
+                <li>面积</li>
+            </ul>
+    <div style = "height:2px;width:800px;background-color:orange"></div>
+    <div style = "height:43px;width:934px;">
+    <p class = "selectp"><label class = "sellab">筛选</label>
+
+    <span class = "intospan intospan1"><input type="checkbox" /><label class = "chicelab">满两年</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">满五年</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">新上</label></span>
+    <span class = "intospan"><input type="checkbox" /><label class = "chicelab">随时看房</label></span>
+    </p>
+    </div>
+    </div>
+
+<div id = "dBody1c">
+
+<div id = "dBody1ctop">
+    <span id ="lspan">共找到40套在租房源</span>
+    <span id = "rspan">
+        <img src="image/clear.png" id = "imgclear" alt="无图" />
+        <span id = "clearsearch" onclick="alert('hahaha')">清空条件</span>
+    </span>
+</div>
+<div id = "dBody1center">
+
+<!-- <div class = "houseview">
+    <hr class = "hrtop"/>
+    <div class = "divbottom">
+        <div class = "divleft"></div>
+        <div class = "divright">
+            <p class="p1">光谷大厦 大阳台 东南向 精装修<span class = "p1s1">5300元/月</span></p>
+            <p class="p2">2017.11.24更新</p>
+            <p class="p3"><img class = "homeicon" src="image/home_icon.png" alt="noicon" /><span class = "p3s3">光谷大厦 | 3室2厅 | 120平方米 | 东南 | 精装</span></p>
+            <p class="p4"><img class = "homeicon" src="image/pointer_icon.png" alt="noicon" /><span class = "p3s3">A6栋 | 12层 | 洪山区</span></p>
+            <p class="p5"><span class="p5s5">学区</span><span class="p5s5">地铁</span><span  class="p5s5">免押金</span><span class="p5s5">购物</span><span class="p5s5">中心</span></p>
+        </div>
+    </div>
+</div>
+ -->
+
+
+</div>
+<div id = "dBody1cfoot">
+    <div id ="pages">
+<span id = "uppage" class = "changepage">上一页</span>
+<span id = "page1" class = "changepage">1</span>
+<span id = "page2" class = "changepage">2</span>
+<span id = "page3" class = "changepage">3</span>
+<span id = "nextpage" class = "changepage">下一页</span>
+
+    </div>
+
+</div>
+
+</div>
+
+    </div>
+</div>
+<div id = "dEnd">
+    <label id = "ilabel"></label>
+
+</div>
+</body>
+<script type='text/javascript' src='js/jquery.2.1.1.min.js'></script>
+<script type="text/javascript">
+    //遍历房源
+
+
+
+  var oJson = [{"a":"光谷大厦 大阳台 东南向 精装修","b":"5300元/月","c":"2017.11.24更新","d":"image/home_icon.png","e":"光谷大厦 | 3室2厅 | 120平方米 | 东南 | 精装","f":"image/pointer_icon.png","h":"A6栋 | 12层 | 洪山区","i":"购物","j":"地铁","k":"免押金","l":"学区","m":"中心","n":"image/pic_1.jpg"},
+    {"a":"金融大厦 大阳台 西北向 精装修","b":"4200元/月","c":"2016.08.08更新","d":"image/home_icon.png","e":"金融大厦 | 2室2厅 | 100平方米 | 西北 | 精装","f":"image/pointer_icon.png","h":"B5栋 | 23层 | 宝安区","i":"学区","j":"地铁","k":"拎包住","l":"购物","m":"公园","n":"image/pic_2.jpg"},
+    {"a":"京基一百 小阳台 南北向 简装修","b":"8300元/月","c":"2017.05.05更新","d":"image/home_icon.png","e":"京基大厦 | 3室3厅 | 150平方米 | 南北 | 精装","f":"image/pointer_icon.png","h":"A3栋 | 18层 | 福田区","i":"地铁","j":"购物","k":"免押金","l":"学区","m":"特区","n":"image/pic_3.jpg"},
+    {"a":"创意大厦 无阳台 西南向 精装修","b":"2300元/月","c":"2016.10.24更新","d":"image/home_icon.png","e":"创意大厦 | 2室1厅 | 80平方米 | 西南 | 精装","f":"image/pointer_icon.png","h":"C5栋 | 15层 | 东西区","i":"学区","j":"地铁","k":"免押金","l":"购物","m":"便民","n":"image/pic_4.jpg"}];
+
+
+setTimeout(function(){HousePage(oJson)},1000);
+
+     function HousePage(oJson){
+
+ for(var i = 0 ; i < 4;i++)
+            {   $("#dBody1center").append('<div class = "houseview">'+'</div>');
+                $(".houseview").eq(i).append('<hr class = "hrtop">');
+                $(".houseview").eq(i).append('<div class = "divbottom">'+'</div>');
+                $(".divbottom").eq(i).append('<div class = "divleft">'+'</div>');
+                $(".divleft").eq(i).css("background-image","url("+oJson[i]['n']+")");
+                $(".divbottom").eq(i).append('<div class = "divright">'+'</div>');
+                $(".divright").eq(i).append('<p class = "p1">'+oJson[i]["a"]+'</p>');
+                $(".p1").eq(i).append('<span class = "p1s1">'+oJson[i]["b"]+'</span>');
+                $(".divright").eq(i).append('<p class = "p2">'+oJson[i]["c"]+'</p>');
+                $(".divright").eq(i).append('<p class = "p3">'+'</p>');
+                $(".p3").eq(i).append('<img class = "homeicon" src = "'+oJson[i]['d']+'">');
+                $(".p3").eq(i).append('<span class = "p3s3">'+oJson[i]["e"]+'</span>');
+                $(".divright").eq(i).append('<p class = "p4">'+'</p>');
+                $(".p4").eq(i).append('<img class = "homeicon" src = "'+oJson[i]['f']+'">');
+                $(".p4").eq(i).append('<span class = "p3s3">'+oJson[i]["h"]+'</span>');
+                $(".divright").eq(i).append('<p class = "p5">'+'</p>');
+                $(".p5").eq(i).append('<span class = "p5s5">'+oJson[i]["i"]+'</span>');
+                $(".p5").eq(i).append('<span class = "p5s5">'+oJson[i]["j"]+'</span>');
+                $(".p5").eq(i).append('<span class = "p5s5">'+oJson[i]["k"]+'</span>');
+                $(".p5").eq(i).append('<span class = "p5s5">'+oJson[i]["l"]+'</span>');
+                $(".p5").eq(i).append('<span class = "p5s5">'+oJson[i]["m"]+'</span>');
+            };
+}
+
+
+
+
+    var xLabel = "Copyright © 深圳奶爸科技有限公司 粤ICP备14091639号";
+    $("#ilabel").html(xLabel);
+
+    $("#mainpage").click(function(){
+
+        setTimeout(function(){
+            window.location.href="YunOffice.html";
+        },1000);
+    });
+$("#rental").click(function(){
+            window.location.href="Rental.html";
+    });
+
+$("#page2").css({"background-color":"#e9dddd!important","color":"#7a7676!important"});
+
+$(".changepage").click(function(){
+
+$(".changepage").css({"background-color":"#e9dddd","color":"#7a7676"});
+$(this).css({"background-color":"orange","color":"white"});
+$("#dBody1center").html("");
+setTimeout(function(){HousePage(oJson)},500);
+}
+    );
+
+</script>
+</html>
