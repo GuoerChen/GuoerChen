@@ -23,7 +23,7 @@ var oJson = [{"a":"image/pic_1.jpg","b":"375","c":"富豪山庄第一街","d":"3
             {"a":"image/pic_4.jpg","b":"395","c":"武汉皇家植树","d":"3室1厅","e":"222.5"}];
 
  for(var i = 0 ; i < 4;i++)
-            {   $("#tp1").append('<a href="http://www.baidu.com" target="blank" class = "Toa">'+'</a>');
+            {   $("#tp1").append('<a href="https://guoerchen.github.io/GuoerChen/YUNOFFICE/Rental.html"  class = "Toa">'+'</a>');
                 $(".Toa").eq(i).append('<div class = "inDivs">'+'</div>');
                 $(".inDivs").eq(i).append('<div class = "inDivs1">'+'</div>');
                 $(".inDivs").eq(i).append('<div class = "inDivs2">'+'</div>');
