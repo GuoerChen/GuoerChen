@@ -2,7 +2,7 @@
 * @Author: chenzhen
 * @Date:   2017-11-15 13:35:23
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-24 00:02:37
+* @Last Modified time: 2017-11-25 15:26:53
 */
 //定义文字
 var xLabel = "Copyright © 深圳奶爸科技有限公司 粤ICP备14091639号";
@@ -47,7 +47,9 @@ $("li").eq(1).click(function(){
     })
 
 $("li").eq(2).click(function(){
-    alert("网页还没做！！！");
+    setTimeout(function(){
+        window.location.href="OldHouse.html";
+    },1000);
     })
 
 for (var i = 0;i<($("li").length);i++)
