@@ -2,7 +2,7 @@
 * @Author: Marte Chen
 * @Date:   2017-11-25 15:42:09
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-26 16:32:22
+* @Last Modified time: 2017-11-26 23:28:59
 */
     //遍历房源
 
@@ -27,6 +27,11 @@ setTimeout(function(){HousePage(oJson)},1000);
                 $(".divbottom").eq(i).append('<div class = "divleft">'+'</div>');
                 $(".divleft").eq(i).attr('id',divleftid);
                 $(".divleft").eq(i).css("background-image","url("+oJson[i]['n']+")");
+                $(".divleft").eq(i).click(function(){
+                    setTimeout(function(){
+                             window.location.href="RentalDetail.html";
+                    },1000);
+                });
                 $(".divbottom").eq(i).append('<div class = "divright">'+'</div>');
                 $(".divright").eq(i).append('<p class = "p1">'+oJson[i]["a"]+'</p>');
                 $(".p1").eq(i).append('<span class = "p1s1">'+oJson[i]["b"]+'</span>');
@@ -79,9 +84,9 @@ setTimeout(function(){HousePage(oJson)},500);
 setTimeout(function(){
 
 PicMove($(".divleft").eq(0),4,"image/pic_",".jpg",2000);
-PicMove($(".divleft").eq(1),4,"image/pci_",".png",1800);
-PicMove($(".divleft").eq(2),4,"image/icp_",".png",2500);
-PicMove($(".divleft").eq(3),4,"image/ipc_",".png",3000);
+PicMove($(".divleft").eq(1),4,"image/pci_",".png",3000);
+PicMove($(".divleft").eq(2),4,"image/icp_",".png",4000);
+PicMove($(".divleft").eq(3),4,"image/ipc_",".png",5000);
 
 },1001);
 
