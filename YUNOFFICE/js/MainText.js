@@ -2,7 +2,7 @@
 * @Author: chenzhen
 * @Date:   2017-11-15 13:35:23
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-25 15:26:53
+* @Last Modified time: 2017-11-26 16:07:31
 */
 //定义文字
 var xLabel = "Copyright © 深圳奶爸科技有限公司 粤ICP备14091639号";
@@ -68,3 +68,9 @@ $("li").mouseout(function()
     $("li").eq(0).css({"color":"white","border-bottom":"3px solid white"});
 
     });
+
+setTimeout(function(){
+
+PicMove($("#dHead"),3,"image/bannerh",".jpg",3000);
+
+},1000);

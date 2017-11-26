@@ -2,11 +2,10 @@
 * @Author: Marte chen
 * @Date:   2017-11-15 16:07:38
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-15 16:13:28
+* @Last Modified time: 2017-11-26 16:09:02
 */
  body{margin:0px;padding:0px;}
-        #dHead{height:455px;background-image:url("../image/banner.jpg");background-size:100% 100%;}
-        #Dbar{height:105px;}
+        #dHead{height:455px;background-image:url("../image/bannerh1.jpg");background-size:100% 100%;}
 
         #dleft{height:105px;float:left;}
         #logo{width:200px;height:30px;margin-top: 25px;position: absolute;background-image:url("../image/logo.png");}
