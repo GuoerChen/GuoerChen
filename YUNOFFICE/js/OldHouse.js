@@ -2,7 +2,7 @@
 * @Author: Marte chen
 * @Date:   2017-11-25 15:39:47
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-25 15:40:22
+* @Last Modified time: 2017-11-27 16:38:51
 */
   //遍历房源
 
@@ -23,6 +23,11 @@ setTimeout(function(){HousePage(oJson2)},1000);
                 $(".houseview").eq(i).append('<div class = "divbottom">'+'</div>');
                 $(".divbottom").eq(i).append('<div class = "divleft">'+'</div>');
                 $(".divleft").eq(i).css("background-image","url("+oJson[i]['n']+")");
+                $(".divleft").eq(i).click(function(){
+                    setTimeout(function(){
+                             window.location.href="RentalDetail.html";
+                    },1000);
+                });
                 $(".divbottom").eq(i).append('<div class = "divright">'+'</div>');
                 $(".divright").eq(i).append('<p class = "p1">'+oJson[i]["a"]+'</p>');
                 $(".p1").eq(i).append('<span class = "p1s1">'+oJson[i]["b"]+'</span>');
