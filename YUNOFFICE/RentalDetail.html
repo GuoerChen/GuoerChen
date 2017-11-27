@@ -53,11 +53,25 @@
         #manjob{font-weight:bold;font-size:17px;}
         #manname{font-size:15px;}
         #manphone > a{text-decoration:none;color:orange;font-weight:bold;font-size:17px;}
-        #dBody3{width:1000px;height:200px;background-color:blue;margin:10px auto;}
-        #dBody4{width:1000px;height:350px;background-color:black;margin:0px auto;}
-        #dBody5{width:1000px;height:275px;background-color:#CCC;margin:10px auto;}
+        #dBody3{width:1000px;height:200px;margin:10px auto;}
+        .dBodyp3{height:70px;}
+        .spod3left{height:28px;width:160px;display:inline-block;font-size:13px;color:#8a8989;}
+        .spod3right{height:28px;display:inline-block;font-size:13px;color:#1b1a1a;}
+        .spod3right2{width:345px;font-size:12px;height:70px;line-height:17px;vertical-align: top;}
+        #dBody4{width:1000px;height:350px;margin:0px auto;}
+        #map{width:935px;height:320px;margin-left:32px;}
 
+        #dBody5{width:1000px;height:275px;margin:10px auto;}
 
+        #tp1{height: 260px;display: inline-block;text-align:center;width:1000px;}
+        .Toa{display:inline-block;margin-right:50px;}
+        .Toa:last-child{margin-right:0px;}
+        .inDivs{border:1px solid #CCC;width:195px;height:235px;}
+        .inDivs1{height:160px;background-color:pink;background-image:url("../image/pic_1.jpg");background-size:100% 100%;width:195px;}
+        .divRadius{width:70px;height:35px;background-color:black;margin-top: 125px;border-radius: 0px 10px 0px 0px;position: absolute;color:gold;line-height:35px;font-size:20px;}
+        .inDivs2{height:70px;font-family:"微软雅黑";width:195px;}
+        .pp1{font-weight:bold;font-size:13px;position: absolute;margin: 15px 0px 5px 15px;width:200px;text-align: left;}
+        .pp2{font-size:11px;position: absolute;margin: 37px 0px 5px 15px;width:200px;text-align: left;}
         #dEnd{background-color:black;text-align:center;width:1366px;height:109px;}
         #ilabel{color:white;font-family:"微软雅黑";line-height:109px;}
 
@@ -136,10 +150,34 @@
     </div>
 </div>
 
-<div id = "dBody3"></div>
-<div id = "dBody4"></div>
-<div id = "dBody5"></div>
+<div id = "dBody3">
+    <p id ="dBody1p">房源特色</p>
+    <hr class = "ihr"/>
+    <p class = "dBody2p">
+    <span class ="spod3left">交通出行</span><span class = "spod3right">地铁2 3 8 7号线</span>
+    </p>
+    <p class = "dBody2p">
+    <span class ="spod3left">装修描述</span><span class = "spod3right">3星级豪华装修</span>
+    </p>
+    <p class = "dBody2p">
+    <span class ="spod3left">小区福利</span><span class = "spod3right">无</span>
+    </p>
+    <p class = "dBody2p dBodyp3">
+    <span class ="spod3left">周边配套</span><span class = "spod3right spod3right2">东湖新技术开发区紧邻中心城区，依山傍水，风光秀丽。区内地势北高南低，湖泊密布，山峦起伏，三湖（东湖、南湖、汤逊湖）、六山（珞珈山、南望山、伏虎山、喻家山、马鞍山、九峰山）.</span>
+    </p>
+</div>
+<div id = "dBody4">
+    <p id ="dBody1p">小区周边</p>
+    <iframe id = "map" frameborder="0" scrolling="auto" src = "Map.html">
 
+    </iframe>
+</div>
+<div id = "dBody5">
+<p id ="dBody1p">更多房源推荐</p>
+<div id = "tp1">
+</div>
+
+</div>
 
 </div>
 
@@ -153,11 +191,11 @@
 
 <script type="text/javascript">
 
-    var xLabel = "Copyright © 深圳奶爸科技有限公司 粤ICP备14091639号";
+ var xLabel = "Copyright © 深圳奶爸科技有限公司 粤ICP备14091639号";
     $("#ilabel").html(xLabel);
 
     PicMove($("#dBody2left"),4,"image/HD",".jpg",3000);
-     $("#mainpage").click(function(){
+ $("#mainpage").click(function(){
         setTimeout(function(){
             window.location.href="YunOffice.html";
         },1000);
@@ -172,6 +210,22 @@
 $("#rental").click(function(){
             window.location.href="Rental.html";
     });
+
+var oJson = [{"a":"image/pic_1.jpg","b":"375","c":"富豪山庄第一街","d":"3室2厅","e":"134.5"},
+            {"a":"image/pic_2.jpg","b":"370","c":"花镜新城6期","d":"2室2厅","e":"130.5"},
+            {"a":"image/pic_3.jpg","b":"238","c":"阳光小区","d":"3室2厅","e":"190.5"},
+            {"a":"image/pic_4.jpg","b":"395","c":"武汉皇家植树","d":"3室1厅","e":"222.5"}];
+
+ for(var i = 0 ; i < 4;i++)
+            {   $("#tp1").append('<a href="https://guoerchen.github.io/GuoerChen/YUNOFFICE/Rental.html"  class = "Toa">'+'</a>');
+                $(".Toa").eq(i).append('<div class = "inDivs">'+'</div>');
+                $(".inDivs").eq(i).append('<div class = "inDivs1">'+'</div>');
+                $(".inDivs").eq(i).append('<div class = "inDivs2">'+'</div>');
+                $(".inDivs1").eq(i).append('<div class = "divRadius">'+oJson[i]["b"]+"万"+'</div>')
+                $(".inDivs1").eq(i).css("background-image","url("+oJson[i]["a"]+")");
+                $(".inDivs2").eq(i).append('<p class = "pp1">'+oJson[i]["c"]+'</p>');
+                $(".inDivs2").eq(i).append('<p class = "pp2">'+oJson[i]["d"]+' '+oJson[i]["e"]+"平米"+'</p>');
+            }
 
 
 </script>

@@ -2,7 +2,7 @@
 * @Author: Marte Chen
 * @Date:   2017-11-25 15:42:09
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-11-26 23:28:59
+* @Last Modified time: 2017-11-27 00:02:12
 */
     //遍历房源
 
@@ -84,9 +84,9 @@ setTimeout(function(){HousePage(oJson)},500);
 setTimeout(function(){
 
 PicMove($(".divleft").eq(0),4,"image/pic_",".jpg",2000);
-PicMove($(".divleft").eq(1),4,"image/pci_",".png",3000);
-PicMove($(".divleft").eq(2),4,"image/icp_",".png",4000);
-PicMove($(".divleft").eq(3),4,"image/ipc_",".png",5000);
+PicMove($(".divleft").eq(1),4,"image/pci_",".png",2000);
+PicMove($(".divleft").eq(2),4,"image/icp_",".png",2000);
+PicMove($(".divleft").eq(3),4,"image/ipc_",".png",2000);
 
 },1001);
 
