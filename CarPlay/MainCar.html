@@ -76,9 +76,42 @@
 
 /* 标记 */
 
-
+/*标记*/
         #product{width:1260px;height:900px;background-image:url("image/product.png");background-size:100% 100%;}
         #pviews{width:800px;height:680px;margin:0px auto;background-color:white;}
+
+        #pdivt{width:700px;height:140px;margin:0px auto;font-family:"微软雅黑";}
+        #pp1{margin:0px;width:700px;height:100px;font-size: 40px;line-height: 140px;text-align: center;
+        font-style: oblique;}
+        #pp2{margin:0px;width:700px;height:40px;line-height: 40px;text-align: center;font-size: 14px;
+            font-style: oblique;font-weight: bold;color: #656565;}
+
+        #pdivm{width:700px;height:400px;margin:0px auto;}
+
+        #pdleft{margin:0px;width:400px;height:400px;float:left;}
+        #igfgj{margin:0px;width:400px;height:320px;}
+        #mp3{margin:0px;width:400px;height:80px;}
+        #innermp3{margin:0px auto;width:160px;height:50px;border: 1px solid black;text-align:center;line-height:50px;color:black;}
+        #innermp3:hover{background-color:black;color:white;}
+        #runcar{width: 80px;height: 28px;vertical-align: middle;}
+
+        #pdright{margin:0px;width:300px;height:400px;float:right;}
+        #bxx{margin:0px;width:300px;height:400px;background-color:white;}
+        #pdivb{width:700px;height:140px;margin:0px auto;}
+        #cpgg{margin:0px;width:650px;height:40px;background-color:#898989;line-height:40px;color:white;
+            padding-left: 50px;font-size: 12px;font-weight: bold;font-family:"微软雅黑";}
+        #cpgg:hover{background-color:#1b1b1b;}
+
+
+        #tbgg{margin:0px;width:700px;height:80px;border-collapse: collapse;font-size: 13px;font-family: "微软雅黑";}
+
+        td {width:300px;padding-left: 50px;}
+        tr > td:first-child{border-right:1px solid #CCC;color:#5c5c5c;}
+        tr{background-color:white;}
+        tr:nth-child(even){background-color:#eaeaea;}
+        #zhedie{font-size: 22px;float: right;margin-right: 20px;}
+/*标记*/
+
         #server{width:1260px;height:900px;background-color:#eaeaea;}
         #sviews{width:956px;height:680px;margin:0px auto;background-color:white;}
 
@@ -267,8 +300,32 @@
 <div class = "view">
 
      <div id ="pviews">
-
-
+        <div id =  "pdivt">
+            <p id = "pp1"><span style ="font-size:60px;color:red">全</span><span style = "color:red">新V8</span>&nbsp;<span>涡轮</span></p>
+            <p id = "pp2">法拉利精髓的精彩演绎</p>
+        </div>
+        <div id =  "pdivm">
+            <div id = "pdleft">
+            <img id = "igfgj" src="image/ghost.jpg" alt="fadongji" />
+        <div id = "mp3">
+            <div id = "innermp3">
+            <img id = "runcar" src="image/car1.png" alt="pocar" />
+            </div>
+        </div>
+            </div>
+            <div id = "pdright">
+            <img id = "bxx" src="image/bxx1.png" alt="bxx" />
+            </div>
+        </div>
+        <div id =  "pdivb">
+        <div id = "cpgg">
+            发动机<span id = "zhedie">∧</span>
+        </div>
+            <table id = "tbgg">
+                <tr><td>类型</td><td>V8 - 90°涡轮增压</td></tr>
+                <tr><td>最大功率</td><td>492 kW (670 CV) at 8000 rpm</td></tr>
+            </table>
+        </div>
     </div>
 </div>
 </div>
@@ -292,7 +349,7 @@
 
 <!-- 尾巴 -->
 <div id = "divFoot">
-
+<audio  src="image/Interno.mp3"></audio>
 </div>
 
 
@@ -347,8 +404,6 @@ $(".to2tab").click(function()
 
 });
 
-
-
 //点击TAB换页和颜色
 
             for(var i = 0; i<oBar.length;i++){
@@ -375,7 +430,18 @@ $(".to2tab").click(function()
 
         }
 
+//播放MP3
+$("#innermp3").mouseover(function(){
 
+    $("audio")[0].play();
+    $("#runcar").attr("src","image/car4.png");
+})
+
+$("#innermp3").mouseout(function(){
+
+    $("audio")[0].pause();
+    $("#runcar").attr("src","image/car1.png");
+})
 
 //点击video放大
 $("#video1").click(
@@ -396,6 +462,20 @@ $("#video3").click(
     }
     );
 
+//折叠table
+$("#cpgg").click(function(){
+
+var addchar = $("#zhedie").html();
+if(addchar == '∧')
+{
+    $("#zhedie").html('∨');
+}
+else
+{
+    $("#zhedie").html('∧');
+}
+
+})
 
 </script>
 </html>
