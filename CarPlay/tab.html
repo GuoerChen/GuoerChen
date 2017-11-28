@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Tab</title>
+    <style type="text/css">
+	/*
+	* @Author: Marte Chen
+	* @Date:   2017-11-28 11:20:59
+	* @Last Modified by:   Marte
+	* @Last Modified time: 2017-11-28 11:35:26
+	*/
+    body{margin:0px;padding:0px;}
+        #dviews{width:800px;height:680px;margin:0px auto;}
+        #tabto{width:800px;height:40px;margin:0px;font-size:0px;}
+        .totab{display:inline-block;width:85px;height:40px;line-height:40px;text-align:center;background-color:#404040;color:#CCC;font-size:12px;font-family:"微软雅黑";border-left:1px solid white;}
+        #to1{background-color:#292929;color:white;}
+        #divto{width:800px;height:600px;margin:0px;}
+        .todiv{width:800px;height:600px;margin:0px;position:absolute;background-color:#CCC;}
+        #tdv1{z-index:1;}
+
+    </style>
+</head>
+<body>
+<div id = "dviews">
+
+<div id ="tabto">
+    </div>
+
+    <div id ="divto">
+    </div>
+
+
+</div>
+</body>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+var oJson = [{"a":"TAB1","b":"Conten1"},
+            {"a":"TAB2","b":"Conten2"},
+            {"a":"TAB3","b":"Conten3"},
+            {"a":"TAB4","b":"Conten4"}];
+
+ for(var i = 0 ; i < oJson.length;i++)
+            {
+                var divtab = "to"+(i+1);
+                var divto = "tdv"+(i+1);
+                $("#tabto").append('<div class = "totab">'+oJson[i]["a"]+'</div>');
+                $(".totab").eq(i).attr('id',divtab);
+                $("#divto").append('<div class = "todiv">'+oJson[i]["b"]+'</div>');
+                $(".todiv").eq(i).attr('id',divto);
+            }
+
+var oBar = document.getElementsByClassName("totab");
+
+            for(var i = 0; i<oBar.length;i++){
+                oBar[i].onclick = function() {
+                $(".totab").css({"background-color":"#404040","color":"#CCC"});
+                this.style.backgroundColor = "#292929";
+                this.style.color = "white";
+                Move(this);
+             }
+            }
+
+  function Move(obj) {
+           var oId = obj.id;
+           var oWich = parseInt(oId.slice(-1))-1;
+           var oPanl = document.getElementsByClassName("todiv");
+           for(var i = 0; i<oPanl.length;i++){
+           oPanl[i].style.zIndex = 0;
+
+       }
+           oPanl[oWich].style.zIndex = 1;
+
+
+        }
+
+</script>
+</html>

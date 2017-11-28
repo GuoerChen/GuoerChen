@@ -21,6 +21,8 @@
         .title{width:1260px;height:120px;margin-top:46px;position:absolute;}
         .onetitle{height:120px;line-height:120px;font-size:22px;margin:0px 0px 0px 150px;font-weight:bold;font-family:"微软雅黑";font-style: oblique;color:#CCC;}
         .view{width:1260px;height:680px;position: absolute;margin-top: 166px;}
+
+/* 标记 */
         #dviews{width:800px;height:680px;margin:0px auto;}
         #tabto{width:800px;height:40px;margin:0px;font-size:0px;}
         #to2{border-right:1px solid white;border-left:1px solid white;}
@@ -30,17 +32,45 @@
         #to1{background-color:#292929;color:white;}
 
         #divto{width:800px;height:600px;margin:0px;}
-        .todiv{width:800px;height:600px;margin:0px;position:absolute;}
-        #tdv1{z-index:1;background-color:white;}
-        #tdv2{background-color:#CCC;}
-        #tdv3{background-color:#CCC;}
+        .todiv{width:800px;height:600px;margin:0px;position:absolute;background-color:white;}
+        #tdv1{z-index:1;}
 
         #page1p{margin:0px;width:800px;height:150px;}
+        .tip1{margin:0px auto;width:700px;height:75px;}
+        #ptop{line-height: 105px;font-size: 28px;font-style: oblique;font-family: "微软雅黑";}
+        #spanbot{font-size: 14px;font-family: "微软雅黑";line-height: 30px;color: #595353;}
         #imgs1{margin:0px;width:800px;height:450px;}
         #img1s{background-size:100% 100%;width:800px;height:450px;}
 
+        .page2p{margin:0px;width:400px;height:600px;float:left;}
+        .imgs2{margin:0px;width:400px;height:600px;float:right;}
+        .img2s{background-size:100% 100%;width:400px;height:600px;}
+        .p2p1,.p2p2,.p2p3,.p2p4,.p2d1{margin:0px auto;}
+        .p2p1{width:300px;height:70px;font-size: 13px;font-family: "微软雅黑";font-weight: bold;color: #4a4646;line-height: 110px;}
+        .p2p2{width:300px;height:120px;font-size: 34px;font-style: oblique;}
+        .p2p3{width:300px;height:110px;width: 300px;height: 110px;font-size: 14px;font-family: "微软雅黑";color: #484646;line-height: 23px;}
+        .p2p4{width:300px;height:140px;font-size: 14px;font-family: "微软雅黑";color: #484646;line-height: 23px;}
+        .p2d1{width:300px;height:160px;text-align: center;line-height: 160px;font-size: 13px;font-family: "微软雅黑";color: #3F3F3F;}
+        .uppage:hover{color:blue;}
+/* 标记 */
+/* 标记 */
         #create{width:1260px;height:900px;background-color:#202020;}
-        #cviews{width:956px;height:680px;margin:0px auto;background-color:white;}
+        #cviews{width:956px;height:680px;margin:0px auto;}
+
+#tab2to{width:956px;height:40px;margin:0px;font-size:0px;}
+        #tor2{border-right:1px solid white;border-left:1px solid white;}
+
+        .to2tab{display:inline-block;width:90px;height:40px;line-height:40px;text-align:center;background-color:#404040;color:#CCC;font-size:12px;font-family:"微软雅黑";}/*#292929*/
+        .to2tab:active{background-color:#292929;color:white;}
+        #tor1{background-color:#292929;color:white;}
+
+        #div2to{width:956px;height:600px;margin:0px;}
+        .to2div{width:956px;height:600px;margin:0px;position:absolute;background-color:white;}
+        #tdvr1{z-index:1;}
+
+/* 标记 */
+
+
         #product{width:1260px;height:900px;background-image:url("image/product.png");background-size:100% 100%;}
         #pviews{width:800px;height:680px;margin:0px auto;background-color:white;}
         #server{width:1260px;height:900px;background-color:#eaeaea;}
@@ -91,7 +121,7 @@
 </div>
 <div id = "divBody" >
 <div id = "innerBody">
-
+<!-- 第一页结构 -->
 <div id = "design">
 <div class = "title">
 
@@ -110,22 +140,57 @@
     <div id ="divto">
         <div class = "todiv" id = "tdv1">
             <div id = "page1p">
-           hahahahhahhahah
-
+            <p class = "tip1" id = "ptop">
+                <span style = "color:red;font-size:39px;">极</span><span style = "color:red">致的动感</span> <span>与舒适度</span>
+            </p>
+            <p class = "tip1">
+                <span id = "spanbot">
+                    488 GTB由法拉利设计中心设计完成，拥有雕刻般美感的两翼，是突出其个性的关键所在。它的大型个性化进气扇形板是对首款308 GTB的致敬，此板由一个定风翼分为两个部分。
+                </span>
+            </p>
             </div>
             <div id = "imgs1">
                 <img id = "img1s" src="image/ferrari1.jpg" alt="wutu" />
             </div>
         </div>
-        <div class = "todiv" id = "tdv2">2</div>
-        <div class = "todiv" id = "tdv3">3</div>
+        <div class = "todiv" id = "tdv2">
+
+        <div class = "page2p">
+            <p class = "p2p1"><span>法拉利 488 GTB外观</span></p>
+            <p class = "p2p2"><span style = "font-size:45px">风</span><span >格设计诠释</span>&nbsp;<span style = "color:red">卓越性能</span></p>
+            <p class = "p2p3"><span>488 GTB由法拉利设计中心设计完成，拥有雕刻般美感的两翼，是突出其个性的关键所在。它的大型个性化进气扇形板是对首款308 GTB的致敬，此板由一个定风翼分为两个部分。</span></p>
+            <p class = "p2p4"><span>车前的特点是双开放格栅，会将空气引入进两个散热器。车子还有一个双前扰流器，仔细观看的话，很像F1单座跑车的前扰流器。在中央，两个吊架与一个导向板结合，导向板可将空气引向平坦的底盘。</span></p>
+            <div class = "p2d1"><span class = "uppage" >< 上一页&nbsp;</span><span> | </span><span class = "uppage">&nbsp;下一页 ></span></div>
+
+            </div>
+            <div class = "imgs2">
+                <img class = "img2s" src="image/ferrari2.jpg" alt="wutu" />
+            </div>
+
+        </div>
+        <div class = "todiv" id = "tdv3">
+            <div class = "page2p">
+            <p class = "p2p1"><span>法拉利 488 GTB 内饰</span></p>
+            <p class = "p2p2"><span style = "font-size:45px">探</span><span>索核心</span>&nbsp;<span style = "color:red">精髓</span></p>
+            <p class = "p2p3"><span>488 GTB的驾驶室设计旨在保证驾驶舒适的前提下，突显出极致的运动感。所以驾驶室会带给人一切围绕着车手需要而打造的感觉：所有指令并非堆积到方向盘上，而是分布于弧形的卫星装置，这些装置的角度直接面向车手。</span></p>
+            <p class = "p2p4"></p>
+            <div class = "p2d1"><span class = "uppage">< 上一页&nbsp;</span><span> | </span><span class = "uppage">&nbsp;下一页 ></span></div>
+
+            </div>
+            <div class = "imgs2">
+            <img class = "img2s" src="image/ferrari3.jpg" alt="wutu" />
+            </div>
+
+        </div>
+
+
+        </div>
     </div>
 
 
 </div>
 </div>
-
-</div>
+<!-- 第二页结构 -->
 <div id = "create">
 <div class = "title">
     <p class = "onetitle">创新技术&nbsp;&nbsp;&nbsp; ————</p>
@@ -135,10 +200,34 @@
 
     <div id ="cviews">
 
+
+    <div id ="tab2to">
+        <div class = "to2tab" id = "tor1">动力系统</div>
+        <div class = "to2tab" id = "tor2">空气动力</div>
+        <div class = "to2tab" id = "tor3">车辆动力</div>
     </div>
+
+    <div id ="div2to">
+        <div class = "to2div" id = "tdvr1">
+4165
+        </div>
+        <div class = "to2div" id = "tdvr2">
+5463854
+        </div>
+        <div class = "to2div" id = "tdvr3">
+456345
+        </div>
+
+    </div>
+
+
+
+    </div>
+
 </div>
 
 </div>
+<!-- 第三页结构 -->
 <div id = "product">
 <div class = "title">
     <p class = "onetitle">产品规格&nbsp;&nbsp;&nbsp; ————</p>
@@ -152,28 +241,28 @@
     </div>
 </div>
 </div>
-<div id = "server">
-<div class = "title">
-    <p class = "onetitle" style = "color:black">服务&nbsp;&nbsp;&nbsp; ————</p>
+<!-- 第四个页结构 -->
+    <div id = "server">
+    <div class = "title">
+        <p class = "onetitle" style = "color:black">服务&nbsp;&nbsp;&nbsp; ————</p>
 
-</div>
-<div class = "view">
-     <div id ="sviews">
-
+    </div>
+    <div class = "view">
+         <div id ="sviews">
+        </div>
+    </div>
 
     </div>
 
-</div>
-</div>
-</div>
+    <!-- body -->
+    </div>
+    </div>
 
 
-</div>
+<!-- 尾巴 -->
 <div id = "divFoot">
 
-
 </div>
-
 
 
 </body>
@@ -190,20 +279,54 @@ return false;
    var oBar = document.getElementsByClassName("totab");
             for(var i = 0; i<oBar.length;i++){
                 oBar[i].onclick = function() {
-                 Move(this);
+                $(".totab").css({"background-color":"#404040","color":"#CCC"});
+                this.style.backgroundColor = "#292929";
+                this.style.color = "white";
+                Move(this);
+
              }
             }
 
   function Move(obj) {
+
+           var j = 100 ;
            var oId = obj.id;
            var oWich = parseInt(oId.slice(-1))-1;
            var oPanl = document.getElementsByClassName("todiv");
-           for(var i = 0; i<oPanl.length;i++){
+          for(var i = 0; i<oPanl.length;i++){
            oPanl[i].style.zIndex = 0;
-       }
-           oPanl[oWich].style.zIndex = 1;
+         }
+
+         oPanl[oWich].style.zIndex = 1;
 
         }
+
+ var oBar1 = document.getElementsByClassName("to2tab");
+            for(var i = 0; i<oBar.length;i++){
+                oBar1[i].onclick = function() {
+                $(".to2tab").css({"background-color":"#404040","color":"#CCC"});
+                this.style.backgroundColor = "#292929";
+                this.style.color = "white";
+                Move1(this);
+
+             }
+            }
+
+  function Move1(obj) {
+
+           var j = 100 ;
+           var oId = obj.id;
+           var oWich = parseInt(oId.slice(-1))-1;
+           var oPanl1 = document.getElementsByClassName("to2div");
+          for(var i = 0; i<oPanl1.length;i++){
+           oPanl1[i].style.zIndex = 0;
+         }
+
+         oPanl1[oWich].style.zIndex = 1;
+
+        }
+
+
 
 </script>
 </html>
