@@ -23,8 +23,8 @@
             transform:rotateZ(360deg);
         }
         #btn{background-color:red;height:80%;border:none;border-radius:10px;}
-
-    </style>
+        #Oaudio{height: 0px;width: 0px;display: none;}
+     </style>
 </head>
 <body>
 
@@ -41,6 +41,7 @@
 </div>
 <div id = "footer">
 <button id = "btn">开始</button>
+<audio id = "Oaudio" src="http://music.163.com/song/media/outer/url?id=5255650.mp3" controls="controls"></audio>
 </div>
 
 
@@ -105,26 +106,27 @@ window.onresize = function(){
    flex();
 };
 
+//暂停按钮
+//
 var BtStutas = 100;
-
 $("#btn").click(function(){
-    console.log(BtStutas);
+    var Audio = document.getElementById("Oaudio");
     if(BtStutas == 100){
         $("#btn").css("background-color","white");
         $("#btn").html("暂停");
+        Audio.play();
         BtStutas = 99;
     }
     else if(BtStutas == 99)
     {
         $("#btn").css("background-color","red");
         $("#btn").html("开始");
+        Audio.pause();
         BtStutas = 100;
     }
     else {
         alert("Lose Btn");
-
     };
-
 });
 
 
