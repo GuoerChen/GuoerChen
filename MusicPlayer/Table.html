@@ -43,10 +43,11 @@ $.get("proxy.php", {
         urlString
       }, function(data) {
         console.log("aaaaaa");
-        data = JSON.parse(data)
+        console.log(JSON.stringify(data))
+        /*data = JSON.parse(data);
         data['data']['song']['list'].forEach(
           console.log(e['f'])
-        )
+        )*/
       })
 
 
