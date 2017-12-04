@@ -38,10 +38,11 @@ var urlString = "http://s.music.qq.com/fcgi-bin/music_search_new_platform?t=0&n=
 $.post("proxy.php", {
         urlString
       }, function(data) {
-        data = JSON.parse(data)
+        console.log(data);
+        /*data = JSON.parse(data)
         data['data']['song']['list'].forEach(
          console.log(data)
-        )
+        )*/
 
       })
 
