@@ -39,7 +39,7 @@ var urlString = "http://s.music.qq.com/fcgi-bin/music_search_new_platform?t=0&n=
 
 
 //用了个PHP代理解决跨域问题
-$.post("proxy.php", {
+$.get("proxy.php", {
         urlString
       }, function(data) {
         console.log("aaaaaa");
