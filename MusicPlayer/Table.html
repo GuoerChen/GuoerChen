@@ -34,23 +34,27 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
 
-var urlString = "http://s.music.qq.com/fcgi-bin/music_search_new_platform?t=0&n=10&aggr=1&cr=1&loginUin=0&format=jsonp&inCharset=GB2312&outCharset=utf-8&notice=0&platform=jqminiframe.json&needNewCode=1336417143&p=1&catZhida=0&remoteplace=sizer.newclient.next_song&w=王菲";
-
-
-urlString = urlString;
 
 $.ajax({
-  type: "post",
+  type: "get",
   async: true,
-  url: urlString,
+  url:  "https://songsearch.kugou.com/song_search_v2?",
+ data:{
+    keyword:"刘德华",
+    page:1,
+    pagesize:10,
+    userid:"-1",
+    clientver:null,
+    platform:"WebFilter",
+    tag:"em",
+    filter:2,
+    iscorrection:1,
+    privilege_filter:0
+  },
   dataType: "jsonp",
-  jsonp: "callback",
-  jsonpCallback: "JsonCallback",
   scriptCharset: 'GBK',//设置编码，否则会乱码
-  success: callback = function(data) {
-    //data = JSON.parse(data);
-  console.log(data['data']['song']['list']);
-
+  success:  function(data) {
+  console.log(data['data']['lists']);
 
   },
   error: function() {
