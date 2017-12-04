@@ -33,7 +33,27 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
 
-var urlString = "http://s.music.qq.com/fcgi-bin/music_search_new_platform?t=0&n=3&aggr=1&cr=1&loginUin=0&format=json&inCharset=GB2312&outCharset=utf-8&notice=0&platform=jqminiframe.json&needNewCode=0&p=1&catZhida=0&remoteplace=sizer.newclient.next_song&w=李健";
+var urlString = "http://s.music.qq.com/fcgi-bin/music_search_new_platform?t=0&n=3&aggr=1&cr=1&loginUin=0&format=json&inCharset=GB2312&outCharset=utf-8&notice=0&platform=jqminiframe.json&needNewCode=1336417143&p=1&catZhida=0&remoteplace=sizer.newclient.next_song&w=李健";
+
+
+
+
+//用了个PHP代理解决跨域问题
+$.post("proxy.php", {
+        urlString
+      }, function(data) {
+        console.log("aaaaaa");
+        data = JSON.parse(data)
+        data['data']['song']['list'].forEach(
+          console.log(e['f'])
+        )
+      })
+
+
+
+
+
+
 
 
 
@@ -43,9 +63,12 @@ $.ajax({
   async: true,
   url: urlString,
   dataType: "jsonp",
+  jsonp: "callback",
+  jsonpCallback: "JsonCallback",
+  scriptCharset: 'GBK',//设置编码，否则会乱码
   success: function(data) {
     //data = JSON.parse(data);
-    console.log(data);
+    console.log("data");
     var Length = data.songlist.length; //json 长度
     var listnum = 9;           //每页条数
     var Pages =  Math.floor(Length/listnum) + 1; //页数
@@ -72,6 +95,9 @@ $.ajax({
     alert('fail');
   }
 });*/
+
+
+//http://ws.stream.qqmusic.qq.com/9103820.m4a?fromtag=46";
 
 
 function FenPages(Pages,listnum,oJson){
