@@ -39,14 +39,11 @@ var urlString = "http://s.music.qq.com/fcgi-bin/music_search_new_platform?t=0&n=
 
 
 //用了个PHP代理解决跨域问题
-$.get(  urlString, function(data) {
-        console.log("aaaaaa");
-        console.log(JSON.stringify(data))
-        /*data = JSON.parse(data);
-        data['data']['song']['list'].forEach(
-          console.log(e['f'])
-        )*/
-      },"json")
+$.getJSON(urlString, function(json, textStatus) {
+    console.log(json);
+
+        /*optional stuff to do after success */
+});
 
 
 
