@@ -72,10 +72,10 @@ $.ajax({
             return function(){
             var Oid = oTd[x].innerHTML;
             var Ohash = oTh[x].innerHTML;
-            var tUrl = "http://s.music.qq.com/fcgi-bin/music_search_new_platform?t=0&n=1&aggr=1&cr=1&loginUin=0&format=jsonp&inCharset=GB2312&outCharset=utf-8&notice=0&platform=jqminiframe.json&needNewCode=0&p=1&catZhida=0&remoteplace=sizer.newclient.next_song&w=王菲";
+            var tUrl = "http://s.music.qq.com/fcgi-bin/music_search_new_platform?t=0&n=1&aggr=1&cr=1&loginUin=0&format=jsonp&inCharset=GB2312&outCharset=utf-8&notice=0&platform=jqminiframe.json&needNewCode=0&p=1&catZhida=0&remoteplace=sizer.newclient.next_song&w=王菲&callback=?";
 
            $.ajax({
-                  type: "get",
+                  type: "post",
                   url:  tUrl,
                   dataType: "jsonp",
                   jsonp:"callback",
@@ -83,7 +83,6 @@ $.ajax({
                   scriptCharset: 'GBK',//设置编码，否则会乱码
                   success: callback = function(data) {
                     console.log(JSON.stringify(data['data']['song']['list']));
-
                   },
                   error: function() {
                     alert('fail');
