@@ -13,7 +13,8 @@
         .tables {width:100%;height:63%;display:none;}
         tr{font-size:13px;height:9%;cursor:pointer;}
         tr:nth-child(odd){background-color:#eaeaea;}
-        .songplay{;display:none;}
+        .songplay{display:none;}
+        .songplays{display:none;}
         audio{width:100%;}
     </style>
 </head>
@@ -42,7 +43,7 @@ $.ajax({
  data:{
     keyword:"刘德华",
     page:1,
-    pagesize:10,
+    pagesize:100,
     userid:"-1",
     clientver:null,
     platform:"WebFilter",
@@ -55,6 +56,61 @@ $.ajax({
   scriptCharset: 'GBK',//设置编码，否则会乱码
   success:  function(data) {
   console.log(data['data']['lists']);
+  liststutas = 100;
+  var Length = data['data']['lists'].length; //json 长度
+
+    var listnum = 10;           //每页条数
+    var Pages =  Math.floor(Length/listnum) + 1; //页数
+    FenPages(Pages,listnum,data['data']['lists']);
+    NextPage(Pages);
+    var oTd = document.getElementsByClassName("songplay");
+    var oTh = document.getElementsByClassName("songplays");
+    var oTr = document.getElementsByClassName("startpaly");
+    for(var x = 0;x<oTd.length;x++)
+    {
+        oTr[x].onclick = (function(x){
+            return function(){
+            var Oid = oTd[x].innerHTML;
+            var Ohash = oTh[x].innerHTML;
+            var tUrl = "http://s.music.qq.com/fcgi-bin/music_search_new_platform?t=0&n=1&aggr=1&cr=1&loginUin=0&format=jsonp&inCharset=GB2312&outCharset=utf-8&notice=0&platform=jqminiframe.json&needNewCode=0&p=1&catZhida=0&remoteplace=sizer.newclient.next_song&w=王菲";
+
+           $.ajax({
+                  type: "get",
+                  url:  tUrl,
+                  dataType: "jsonp",
+                  jsonp:"callback",
+                  jsonpCallback: "JsonCallback",
+                  scriptCharset: 'GBK',//设置编码，否则会乱码
+                  success: callback = function(data) {
+                    console.log(JSON.stringify(data['data']['song']['list']));
+
+                  },
+                  error: function() {
+                    alert('fail');
+                  }
+                });
+
+
+
+          //  $("#Imp3").attr('src',"");
+           // $("#Imp3").attr('src',tUrl);
+
+            };
+        })(x);
+
+    }
+
+//http://fs.w.kugou.com/201712042319/a99297b859b9428502c5c2eab468e81e/G005/M01/15/00/pYYBAFS4d62AEYbaADnSIQaWH1U070.mp3
+
+//http://fs.w.kugou.com/201712042331/2ebf8331e726402c37570d4a9133f30c/G004/M06/0E/03/pIYBAFT8PK-AL_q8AD89YuI4BWQ954.mp3
+
+//http://www.kugou.com/yy/index.php?r=play/getdata&hash=D0ECC68A97ECC7E538CE47BF2A4812DB
+
+//http://www.kugou.com/song/#hash=D0ECC68A97ECC7E538CE47BF2A4812DB&album_id=969928
+
+
+//http://www.kugou.com/song/#hash=44352CFC64B0BD13875D4BF63ABFF17C&album_id=7952019
+
 
   },
   error: function() {
@@ -62,8 +118,7 @@ $.ajax({
   }
 });
 
-
-//http://ws.stream.qqmusic.qq.com/9103820.m4a?fromtag=46";
+//http://www.kugou.com/song/#hash=44352CFC64B0BD13875D4BF63ABFF17C&album_id=7952019
 
 
 function FenPages(Pages,listnum,oJson){
@@ -77,7 +132,7 @@ function FenPages(Pages,listnum,oJson){
                    var Shengyu = oJson.length;
                    for(var nn = 0;nn<Shengyu;nn++)
                    {
-                    var stime = oJson[nn]["playtime"];
+                    var stime = oJson[nn]["Duration"];
                     var smin  = parseInt(stime/60);
                     var ssend = stime%60;
                     if (ssend<10)
@@ -85,12 +140,12 @@ function FenPages(Pages,listnum,oJson){
                         ssend = "0"+ssend;
                     }
                     var songtime = "0"+smin+":"+ssend;
-                    $("table").eq(j).append('<tr class = "startpaly"><td class = "songplay">'+oJson[nn]["id"]+'</td><td>'+oJson[nn]["singerName"]+'</td><td>'+oJson[nn]["songName"]+'</td><td>'+songtime+'</td></tr>')
+                    $("table").eq(j).append('<tr class = "startpaly"><td class = "songplay">'+oJson[nn]["AlbumID"]+'</td><td class = "songplays">'+oJson[nn]["FileHash"]+'</td><td>'+oJson[nn]["AlbumName"]+'</td><td>'+oJson[nn]["FileName"]+'</td><td>'+songtime+'</td></tr>')
                    }
                    break;
             }
             else{
-                var stime = oJson[i]["playtime"];
+                var stime = oJson[i]["Duration"];
                 var smin  = parseInt(stime/60);
                 var ssend = stime%60;
                 if (ssend<10)
@@ -98,7 +153,7 @@ function FenPages(Pages,listnum,oJson){
                         ssend = "0"+ssend;
                     }
                 var songtime = "0"+smin+":"+ssend;
-                 $("table").eq(j).append('<tr class = "startpaly"><td class = "songplay">'+oJson[i]["id"]+'</td><td>'+oJson[i]["singerName"]+'</td><td>'+oJson[i]["songName"]+'</td><td>'+songtime+'</td></tr>')
+                 $("table").eq(j).append('<tr class = "startpaly"><td class = "songplay">'+oJson[i]["AlbumID"]+'</td><td class = "songplays">'+oJson[i]["FileHash"]+'</td><td>'+oJson[i]["AlbumName"]+'</td><td>'+oJson[i]["FileName"]+'</td><td>'+songtime+'</td></tr>')
             }
         }
         oJson.splice(0,listnum);
