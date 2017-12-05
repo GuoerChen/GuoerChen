@@ -30,7 +30,7 @@
 </div>
 <div id = "dc">
         <audio  id = "Imp3" src="" autoplay="auto" controls = "controls"></audio>
-        <iframe src="" id = "iframesrc"></iframe>
+        <!-- <audio src="http://yinyueshiting.baidu.com/data2/music/ce331d879e0fbe28f617ffa5987a313e/271832043/271832043.mp3?xcode=f09ea8d60a9ea914223d24c5de246011" autoplay="auto"></audio> -->
 </div>
 </body>
 
@@ -41,49 +41,48 @@
 $.ajax({
   type: "get",
   async: true,
-  url:  "https://songsearch.kugou.com/song_search_v2?",
- data:{
-    keyword:"刘德华",
-    page:1,
-    pagesize:100,
-    userid:"-1",
-    clientver:null,
-    platform:"WebFilter",
-    tag:"em",
-    filter:2,
-    iscorrection:1,
-    privilege_filter:0
-  },
+  url:  "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.merge&query=林俊杰",
+
   dataType: "jsonp",
   scriptCharset: 'GBK',//设置编码，否则会乱码
   success:  function(data) {
-  console.log(data['data']['lists']);
-  liststutas = 100;
-  var Length = data['data']['lists'].length; //json 长度
+  console.log(data['result']['song_info']['song_list']);
 
-    var listnum = 10;           //每页条数
+ liststutas = 100;
+  var Length = data['result']['song_info']['song_list'].length; //json 长度
+
+    var listnum = 9;           //每页条数
     var Pages =  Math.floor(Length/listnum) + 1; //页数
-    FenPages(Pages,listnum,data['data']['lists']);
+    FenPages(Pages,listnum,data['result']['song_info']['song_list']);
     NextPage(Pages);
     var oTd = document.getElementsByClassName("songplay");
-    var oTh = document.getElementsByClassName("songplays");
     var oTr = document.getElementsByClassName("startpaly");
     for(var x = 0;x<oTd.length;x++)
     {
         oTr[x].onclick = (function(x){
             return function(){
+            $("#Imp3").attr('src',"");
             var Oid = oTd[x].innerHTML;
-            var Ohash = oTh[x].innerHTML;
-            var tUrl = "http://www.kugou.com/yy/index.php?r=play/getdata&hash=D0ECC68A97ECC7E538CE47BF2A4812DB";
-            $("#iframesrc").attr('src',tUrl);
+            var tUrl = "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.song.play&songid="+Oid;
 
-            /*setTimeout(function(){
-            var  oJsons = document.getElementById('iframesrc').contentWindow.document.body.innerHTML;
-            console.log(oJsons);
-            },2000);
-*/
+                $.ajax({
+                  type: "get",
+                  async: true,
+                  url:  tUrl,
+                  dataType: "jsonp",
+                  scriptCharset: 'GBK',//设置编码，否则会乱码
+                  success:  function(data) {
 
-            console.log("111111");
+                    console.log(data);
+                  var songUrl = data['bitrate']['file_link'];
+                  //  $("#Imp3").attr('src',"");
+                  $("#Imp3").attr('src',songUrl);
+
+                },
+                  error: function() {
+                    alert('fail');
+                  }
+                });
 
           //  $("#Imp3").attr('src',"");
            // $("#Imp3").attr('src',tUrl);
@@ -93,16 +92,10 @@ $.ajax({
 
     }
 
-//http://fs.w.kugou.com/201712042319/a99297b859b9428502c5c2eab468e81e/G005/M01/15/00/pYYBAFS4d62AEYbaADnSIQaWH1U070.mp3
+//https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.merge&query=王菲
 
-//http://fs.w.kugou.com/201712042331/2ebf8331e726402c37570d4a9133f30c/G004/M06/0E/03/pIYBAFT8PK-AL_q8AD89YuI4BWQ954.mp3
+//https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.song.play&songid=60430982
 
-//http://www.kugou.com/yy/index.php?r=play/getdata&hash=D0ECC68A97ECC7E538CE47BF2A4812DB
-
-//http://www.kugou.com/song/#hash=D0ECC68A97ECC7E538CE47BF2A4812DB&album_id=969928
-
-
-//http://www.kugou.com/song/#hash=44352CFC64B0BD13875D4BF63ABFF17C&album_id=7952019
 
 
   },
@@ -110,9 +103,6 @@ $.ajax({
     alert('fail');
   }
 });
-
-//http://www.kugou.com/song/#hash=44352CFC64B0BD13875D4BF63ABFF17C&album_id=7952019
-
 
 function FenPages(Pages,listnum,oJson){
     for(var j = 0;j < Pages;j++)
@@ -125,28 +115,12 @@ function FenPages(Pages,listnum,oJson){
                    var Shengyu = oJson.length;
                    for(var nn = 0;nn<Shengyu;nn++)
                    {
-                    var stime = oJson[nn]["Duration"];
-                    var smin  = parseInt(stime/60);
-                    var ssend = stime%60;
-                    if (ssend<10)
-                    {
-                        ssend = "0"+ssend;
-                    }
-                    var songtime = "0"+smin+":"+ssend;
-                    $("table").eq(j).append('<tr class = "startpaly"><td class = "songplay">'+oJson[nn]["AlbumID"]+'</td><td class = "songplays">'+oJson[nn]["FileHash"]+'</td><td>'+oJson[nn]["AlbumName"]+'</td><td>'+oJson[nn]["FileName"]+'</td><td>'+songtime+'</td></tr>')
+                    $("table").eq(j).append('<tr class = "startpaly"><td class = "songplay">'+oJson[nn]["song_id"]+'</td><td>'+oJson[nn]["title"]+'</td><td>'+oJson[nn]["author"]+'</td></tr>')
                    }
                    break;
             }
             else{
-                var stime = oJson[i]["Duration"];
-                var smin  = parseInt(stime/60);
-                var ssend = stime%60;
-                if (ssend<10)
-                    {
-                        ssend = "0"+ssend;
-                    }
-                var songtime = "0"+smin+":"+ssend;
-                 $("table").eq(j).append('<tr class = "startpaly"><td class = "songplay">'+oJson[i]["AlbumID"]+'</td><td class = "songplays">'+oJson[i]["FileHash"]+'</td><td>'+oJson[i]["AlbumName"]+'</td><td>'+oJson[i]["FileName"]+'</td><td>'+songtime+'</td></tr>')
+                 $("table").eq(j).append('<tr class = "startpaly"><td class = "songplay">'+oJson[i]["song_id"]+'</td><td>'+oJson[i]["title"]+'</td><td>'+oJson[i]["author"]+'</td></tr>')
             }
         }
         oJson.splice(0,listnum);
