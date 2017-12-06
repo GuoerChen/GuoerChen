@@ -87,8 +87,8 @@ $.ajax({
 //https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.song.play&songid=60430982
 
   },
-  error: function() {
-
+  error: function(result) {
+    alert(result.statusText);
   }
 });
 
