@@ -43,7 +43,7 @@ $.ajax({
   async: false,
   url:  "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.merge&format=jsonp",
   data:{
-    query:encodeURI(encodeURI('林俊杰'),
+    query:encodeURI('林俊杰'),
     page_no:1,
     page_size:50,
     type:"-1",
@@ -55,7 +55,8 @@ $.ajax({
   jsonpCallback: "JsonCallback",
   scriptCharset: 'GBK',//设置编码，否则会乱码
   success:  function(data) {
- liststutas = 100;
+    alert("11111");
+  liststutas = 100;
   var Length = data['result']['song_info']['song_list'].length; //json 长度
 
     var listnum = 9;           //每页条数
