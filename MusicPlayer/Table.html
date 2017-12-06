@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="referrer" content="never">
 
     <title>Table</title>
     <style type="text/css">
@@ -42,7 +41,7 @@
 $.ajax({
   type: "get",
   async: false,
-  url:  "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.merge",
+  url:  "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.merge&format=json",
   data:{
     query:"林俊杰",
     page_no:1,
