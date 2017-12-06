@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Test</title>
+</head>
+<body>
+<BUTTON>654654141</BUTTON>
+</body>
+<script src="js/jquery.2.1.1.min.js"></script>
+<script type="text/javascript">
+
+$("BUTTON").click(function(){
+    $.ajax({
+  type: "get",
+  async: false,
+  url:  "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.merge",
+  data:{
+    query:"林俊杰"
+  },
+  dataType: "jsonp",
+ // jsonp: "callback",
+ // jsonpCallback: "JsonCallback",
+ // scriptCharset: 'GBK',//设置编码，否则会乱码
+  success:  function(data) {
+    alert("1111");
+  },
+  error: function() {
+    alert("fail");
+  }
+});
+
+
+
+})
+
+</script>
+</html>
