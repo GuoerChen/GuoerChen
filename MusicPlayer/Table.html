@@ -30,7 +30,7 @@
 </div>
 <div id = "dc">
         <audio  id = "Imp3" src="" autoplay="auto" controls = "controls"></audio>
-        <!-- <audio src="http://yinyueshiting.baidu.com/data2/music/ce331d879e0fbe28f617ffa5987a313e/271832043/271832043.mp3?xcode=f09ea8d60a9ea914223d24c5de246011" autoplay="auto"></audio> -->
+
 </div>
 </body>
 
@@ -46,7 +46,6 @@ $.ajax({
   dataType: "jsonp",
   scriptCharset: 'GBK',//设置编码，否则会乱码
   success:  function(data) {
-  //console.log(data['result']['song_info']['song_list']);
 
  liststutas = 100;
   var Length = data['result']['song_info']['song_list'].length; //json 长度
@@ -73,10 +72,8 @@ $.ajax({
                   scriptCharset: 'GBK',//设置编码，否则会乱码
                   success:  function(data) {
 
-                  //console.log(data);
                   var songUrl = data['bitrate']['file_link'];
                   alert(songUrl);
-                  //  $("#Imp3").attr('src',"");
                   $("#Imp3").attr('src',songUrl);
 
                 },
@@ -84,9 +81,6 @@ $.ajax({
                     alert('fail');
                   }
                 });
-
-          //  $("#Imp3").attr('src',"");
-           // $("#Imp3").attr('src',tUrl);
 
             };
         })(x);
