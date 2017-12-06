@@ -18,8 +18,8 @@ $("BUTTON").click(function(){
   async: false,
   url:  "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.merge&format=jsonp",
   data:{
-   query:"林俊杰",
-   page_no:1,
+    query:"林俊杰",
+    page_no:1,
     page_size:50,
     type:"-1",
     data_source:0,
@@ -34,8 +34,12 @@ $("BUTTON").click(function(){
     alert("1111");
     console.log(data);
   },
-  error: function() {
+  error: function(XMLHttpRequest,textStatus,errorThrown) {
     alert("fail");
+    alert(XMLHttpRequest.status);
+    alert(XMLHttpRequest.readyState);
+    alert(textStatus);
+
   }
 });
 
