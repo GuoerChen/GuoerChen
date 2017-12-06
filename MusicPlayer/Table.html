@@ -34,7 +34,7 @@
 </div>
 </body>
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/jquery.2.1.1.min.js"></script>
 <script type="text/javascript">
 
 
@@ -63,7 +63,6 @@ $.ajax({
             $("#Imp3").attr('src',"");
             var Oid = oTd[x].innerHTML;
             var tUrl = "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.song.play&songid="+Oid;
-
                 $.ajax({
                   type: "get",
                   async: true,
@@ -71,11 +70,8 @@ $.ajax({
                   dataType: "jsonp",
                   scriptCharset: 'GBK',//设置编码，否则会乱码
                   success:  function(data) {
-
                   var songUrl = data['bitrate']['file_link'];
-
                   $("#Imp3").attr('src',songUrl);
-
                 },
                   error: function() {
                     alert('fail');
@@ -84,14 +80,11 @@ $.ajax({
 
             };
         })(x);
-
     }
 
 //https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.merge&query=王菲
 
 //https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.song.play&songid=60430982
-
-
 
   },
   error: function() {
