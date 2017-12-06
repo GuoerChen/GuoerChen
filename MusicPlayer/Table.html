@@ -44,13 +44,18 @@ $.ajax({
   async: false,
   url:  "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.merge",
   data:{
-    query:"林俊杰"
+    query:"林俊杰",
+    page_no:1,
+    page_size:50,
+    type:"-1",
+    data_source:0,
+    use_cluster:1
   },
   dataType: "jsonp",
   jsonp: "callback",
-  contentType: "application/json;utf-8",
+  //contentType: "application/json;utf-8",
   jsonpCallback: "JsonCallback",
-  scriptCharset: 'GBK',//设置编码，否则会乱码
+  //scriptCharset: 'GBK',//设置编码，否则会乱码
   success:  function(data) {
 
  liststutas = 100;
