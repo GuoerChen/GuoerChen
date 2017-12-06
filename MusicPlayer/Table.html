@@ -41,10 +41,13 @@
 $.ajax({
   type: "get",
   async: false,
-  url:  "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.merge&query=林俊杰",
-
+  url:  "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.merge",
+  data:{
+    query:"林俊杰"
+  },
   dataType: "jsonp",
   jsonp: "callback",
+  contentType: "application/json;utf-8",
   jsonpCallback: "JsonCallback",
   scriptCharset: 'GBK',//设置编码，否则会乱码
   success:  function(data) {
@@ -89,8 +92,8 @@ $.ajax({
 //https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.song.play&songid=60430982
 
   },
-  error: function(result) {
-    alert(result.statusText);
+  error: function() {
+    alert("fail");
   }
 });
 
