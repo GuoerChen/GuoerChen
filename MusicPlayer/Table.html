@@ -81,9 +81,9 @@ $.ajax({
                   scriptCharset: 'GBK',//设置编码，否则会乱码
                   success:  function(data) {
                   var songUrl = data['bitrate']['file_link'];
-                  alert(songUrl);
+                 // alert(songUrl);
                   $("#Imp3").attr('src',songUrl);
-                  alert($("#Imp3").attr('src'))
+                  //alert($("#Imp3").attr('src'))
                 },
                   error: function() {
                     alert('fail');

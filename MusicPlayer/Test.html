@@ -16,10 +16,16 @@ $("BUTTON").click(function(){
     $.ajax({
   type: "get",
   async: false,
-  url:  "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.merge",
+  url:  "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.merge&format=jsonp",
   data:{
-   query:"林俊杰"
+   query:"林俊杰",
+   page_no:1,
+    page_size:50,
+    type:"-1",
+    data_source:0,
+    use_cluster:1
   },
+
   dataType: "jsonp",
  // jsonp: "callback",
  // jsonpCallback: "JsonCallback",
