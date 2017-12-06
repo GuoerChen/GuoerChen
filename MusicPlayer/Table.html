@@ -40,10 +40,12 @@
 
 $.ajax({
   type: "get",
-  async: true,
+  async: false,
   url:  "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.merge&query=林俊杰",
 
   dataType: "jsonp",
+  jsonp: "callback",
+  jsonpCallback: "JsonCallback",
   scriptCharset: 'GBK',//设置编码，否则会乱码
   success:  function(data) {
 
@@ -65,7 +67,7 @@ $.ajax({
             var tUrl = "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.song.play&songid="+Oid;
                 $.ajax({
                   type: "get",
-                  async: true,
+                  async: false,
                   url:  tUrl,
                   dataType: "jsonp",
                   scriptCharset: 'GBK',//设置编码，否则会乱码
