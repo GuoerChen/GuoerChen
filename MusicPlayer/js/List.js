@@ -5,14 +5,7 @@
 * @Last Modified time: 2017-12-06 17:44:23
 */
 
-//第4个按钮
-$("#to3").click(
 
-    function(){
-
-    }
-
-    )
 
 var liststutas = 99;
 
@@ -48,7 +41,7 @@ $("#to2").click(
             $("#Imp3").attr('src',"");
             $("#Imp3").attr('src',tUrl);
             $("#btn").css("background-color","white");
-            $("#btn").html("暂停");
+            $("#btn").html("Pause");
             BtStutas = 99;
             };
         })(x);

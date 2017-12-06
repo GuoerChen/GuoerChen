@@ -68,7 +68,7 @@ $("#searchBtn").click(
                                   var songUrl = data['bitrate']['file_link'];
                                   $("#Imp3").attr('src',songUrl);
                                   $("#btn").css("background-color","white");
-                                 $("#btn").html("暂停");
+                                 $("#btn").html("Pause");
                                  BtStutas = 99;
                                 },
                                   error: function() {

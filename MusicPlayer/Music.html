@@ -143,7 +143,7 @@
 
 </div>
 <div id = "footer">
-<button id = "btn">开始</button>
+<button id = "btn">Start</button>
 <audio  id = "Imp3" src="" autoplay="auto" ></audio>
 </div>
 
@@ -265,14 +265,14 @@ $("#btn").click(function(){
     var Audio = document.getElementById("Imp3");
     if(BtStutas == 100){
         $("#btn").css("background-color","white");
-        $("#btn").html("暂停");
+        $("#btn").html("Pause");
         Audio.play();
         BtStutas = 99;
     }
     else if(BtStutas == 99)
     {
         $("#btn").css("background-color","red");
-        $("#btn").html("开始");
+        $("#btn").html("Start");
         Audio.pause();
         BtStutas = 100;
     }
