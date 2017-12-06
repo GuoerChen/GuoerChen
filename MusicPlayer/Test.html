@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width" />
     <title>Test</title>
 </head>
 <body>
@@ -16,7 +17,7 @@ $("BUTTON").click(function(){
   async: false,
   url:  "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.merge",
   data:{
-    query:"林俊杰"
+   query:"林俊杰"
   },
   dataType: "jsonp",
  // jsonp: "callback",
@@ -24,6 +25,7 @@ $("BUTTON").click(function(){
  // scriptCharset: 'GBK',//设置编码，否则会乱码
   success:  function(data) {
     alert("1111");
+    console.log(data);
   },
   error: function() {
     alert("fail");
