@@ -2,7 +2,7 @@
 * @Author: Marte Chen
 * @Date:   2017-12-06 15:11:51
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-12-06 17:44:23
+* @Last Modified time: 2017-12-06 18:38:18
 */
 
 
@@ -41,7 +41,7 @@ $("#to2").click(
             $("#Imp3").attr('src',"");
             $("#Imp3").attr('src',tUrl);
             $("#btn").css("background-color","white");
-            $("#btn").html("Pause");
+            $("#btn").html("P");
             BtStutas = 99;
             };
         })(x);

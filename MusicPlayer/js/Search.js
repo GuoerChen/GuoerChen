@@ -2,7 +2,7 @@
 * @Author: Chen
 * @Date:   2017-12-06 15:15:29
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-12-06 18:27:37
+* @Last Modified time: 2017-12-06 18:38:57
 */
 
 $("#searchBtn").click(
@@ -68,7 +68,7 @@ $("#searchBtn").click(
                                   var songUrl = data['bitrate']['file_link'];
                                   $("#Imp3").attr('src',songUrl);
                                   $("#btn").css("background-color","white");
-                                 $("#btn").html("Pause");
+                                 $("#btn").html("P");
                                  BtStutas = 99;
                                 },
                                   error: function() {
