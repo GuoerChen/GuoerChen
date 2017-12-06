@@ -20,7 +20,7 @@ $("BUTTON").click(function(){
   data:{
     query:encodeURI('林俊杰'),
     page_no:1,
-    page_size:50,
+    page_size:100,
     type:"-1",
     data_source:0,
     use_cluster:1
@@ -31,7 +31,7 @@ $("BUTTON").click(function(){
  // jsonpCallback: "JsonCallback",
  // scriptCharset: 'GBK',//设置编码，否则会乱码
   success:  function(data) {
-    alert("1111");
+    alert(data['result']['song_info']['song_list'].length);
     console.log(data);
   },
   error: function(XMLHttpRequest,textStatus,errorThrown) {

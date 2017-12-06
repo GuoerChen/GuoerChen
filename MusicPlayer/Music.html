@@ -16,15 +16,14 @@
 
 
 
-        .totab{cursor:pointer;display:inline-block;color:#CCC;font-size:16px;text-align:center;width:25%;height:100%;}
-
+        .totab{cursor:pointer;display:inline-block;color:#CCC;font-size:16px;text-align:center;width:33%;height:100%;}
+        #to3{width:34%;}
         #to1{background-color:#3f8dfd;color:white;}
 
 
         #divpage1{width:99%;height:80%;z-index:1;background-size:100% 100%;}
         #divpage2{width:99%;height:80%;background-color:white;}
         #divpage3{width:99%;height:80%;background-color:white;}
-        #divpage4{width:99%;height:80%;background-color:white;}
         .divpages{position:absolute;margin:0 auto;z-index:0;background-size:100% 100%;}
 
         #test{background-image:url("image/Music1.jpg");background-size:100% 100%;background-repeat:no-repeat; position: absolute;left: 50%;top: 50%;
@@ -33,12 +32,30 @@
          #test:hover{transition:transform 15s linear;
           transform:rotateZ(360deg); }
 
+        #sea1{width:100%;height:7%;font-size:0;text-align:center;}
+
+
+        #searchtext{width:75%;height:100%;border:none; padding: 0px;padding-left:5%;}
+        #searchBtn{width:20%;height:100%;background-color:white;background-image:url("image/search.png");background-repeat:no-repeat;background-position:center;vertical-align: top;border:none;}
+
+
+        #da1{width:100%;height:7%;font-size:0;visibility: hidden;}
+        .tabletitle1{height:100%;width:50%;font-size:14px;display:inline-block;text-align:center;}
+
+        #db1{width:100%;height:78%;}
+        #dc1{width:100%;height:8%;text-align:center;visibility: hidden;}
+        .tables1 {width:100%;height:100%;display:none;border-collapse:collapse;color:#3f8dfd;text-align:center;}
+        .songplay1{display:none;}
+
         #da{width:100%;height:7%;font-size:0;}
         .tabletitle{height:100%;width:33%;font-size:14px;display:inline-block;text-align:center;}
         #tabletitle3{width:34%;}
         #db{width:100%;height:85%;}
         #dc{width:100%;height:8%;text-align:center;}
         .tables {width:100%;height:100%;display:none;border-collapse:collapse;color:#3f8dfd;text-align:center;}
+
+
+
         td{width:33%;}
         tr >td:last-child{color:#7d7d7d;width:34%;}
         tr{font-size:13px;height:10%;cursor:pointer;}
@@ -50,6 +67,9 @@
 
         #labpage{color:#3f8dfd;display:inline-block;width:20%;height:100%;vertical-align: top;text-align:center;}
 
+        #uppages1,#nextpages1{border:none;width:30%;height:100%;background-color:white;color:#7d7d7d;cursor:pointer;}
+
+        #labpage1{color:#3f8dfd;display:inline-block;width:20%;height:100%;vertical-align: top;text-align:center;}
 
 
         #btn{background-color:red;height:80%;border:none;border-radius:10px;}
@@ -61,8 +81,7 @@
 <div id = "header">
 <div class = "totab" id = "to1">正在播放</div>
 <div class = "totab" id = "to2">新歌榜单</div>
-<div class = "totab" id = "to3">歌曲总榜</div>
-<div class = "totab" id = "to4">搜索</div>
+<div class = "totab" id = "to3">搜索</div>
 </div>
 <div id = "bodyer">
 <div id = "divpage1" class = "divpages">
@@ -95,12 +114,28 @@
 
 </div>
 
+
 <div id = "divpage3" class = "divpages">
-没做
+<div id = "sea1" >
+<input type="text" id = "searchtext" placeholder="请输入关键词"><input id = "searchBtn" type="button"/>
+</div>
+<div id = "da1" >
+
+<div class = "tabletitle1" >歌名</div>
+<div class = "tabletitle1" >歌手</div>
+
 </div>
 
-<div id = "divpage4" class = "divpages">
-没做
+
+<div id = "db1">
+
+</div>
+
+<div id = "dc1">
+<button id = "uppages1"><<上一页</button><label id = "labpage1">1</label><button id = "nextpages1">下一页>></button>
+
+
+</div>
 </div>
 
 
@@ -115,6 +150,8 @@
 
 </body>
 <script src="js/jquery.2.1.1.min.js"></script>
+<script src="js/List.js"></script>
+<script src="js/Search.js"></script>
 <script type="text/javascript">
 
 //tabpage
@@ -176,9 +213,17 @@ else
 
  $("#labpage").css("line-height",oLinepage);
 
+  var oLinepage1 = $("#labpage1").css("height");
+
+ $("#labpage1").css("line-height",oLinepage1);
+
  var oLineti = $(".tabletitle").css("height");
 
  $(".tabletitle").css("line-height",oLineti);
+
+ var oLineti1 = $(".tabletitle1").css("height");
+
+ $(".tabletitle1").css("line-height",oLineti1);
 
 
 //外部样式
@@ -245,196 +290,6 @@ $("#to1").click(
     }
 
     )
-
-//第3个按钮
-$("#to3").click(
-
-    function(){
-
-    }
-
-    )
-
-//第4个按钮
-$("#to4").click(
-
-    function(){
-
-    }
-
-    )
-
-var liststutas = 99;
-
-//第2个按钮
-$("#to2").click(
-
-    function(){
-
-        if(liststutas == 99){
-          $.ajax({
-  type: "get",
-  async: true,
-  url: "https://music.qq.com/musicbox/shop/v3/data/hit/hit_newsong.js",
-  dataType: "jsonp",
-  jsonp: "callback",
-  jsonpCallback: "JsonCallback",
-  scriptCharset: 'GBK',//设置编码，否则会乱码
-  success: function(data) {
-    liststutas = 100;
-    var Length = data.songlist.length; //json 长度
-    var listnum = 10;           //每页条数
-    var Pages =  Math.floor(Length/listnum) + 1; //页数
-    FenPages(Pages,listnum,data.songlist);
-    NextPage(Pages);
-    var oTd = document.getElementsByClassName("songplay");
-    var oTr = document.getElementsByClassName("startpaly");
-    for(var x = 0;x<oTd.length;x++)
-    {
-        oTr[x].onclick = (function(x){
-            return function(){
-            var Oid = oTd[x].innerHTML;
-            var tUrl = "http://ws.stream.qqmusic.qq.com/"+Oid+".m4a?fromtag=46";
-            $("#Imp3").attr('src',"");
-            $("#Imp3").attr('src',tUrl);
-            $("#btn").css("background-color","white");
-            $("#btn").html("暂停");
-            BtStutas = 99;
-            };
-        })(x);
-
-    }
-
-  },
-  error: function() {
-    liststutas = 99;
-    alert('获取歌单失败');
-  }
-});
-
-
-        }
-        if(liststutas == 100){
-            liststutas == 100;
-        }
-        else{
-            liststutas == 100;
-        }
-
-
-    }
-
-
-    );
-
-
-
-
-
-
-
-//分页
-function FenPages(Pages,listnum,oJson){
-    for(var j = 0;j < Pages;j++)
-    {
-        var tid = 'tb' + (j+1);
-        $("#db").append('<table class = "tables"></table>')
-        $("table").eq(j).attr('id',tid);
-        for(var i = 0;i < listnum;i++){
-            if( oJson.length < listnum){
-                   var Shengyu = oJson.length;
-                   for(var nn = 0;nn<Shengyu;nn++)
-                   {
-                    var stime = oJson[nn]["playtime"];
-                    var smin  = parseInt(stime/60);
-                    var ssend = stime%60;
-                    if (ssend<10)
-                    {
-                        ssend = "0"+ssend;
-                    }
-                    var songtime = "0"+smin+":"+ssend;
-                    $("table").eq(j).append('<tr class = "startpaly"><td class = "songplay">'+oJson[nn]["id"]+'</td><td>'+oJson[nn]["songName"]+'</td><td>'+oJson[nn]["singerName"]+'</td><td>'+songtime+'</td></tr>')
-                   }
-                   break;
-            }
-            else{
-                var stime = oJson[i]["playtime"];
-                var smin  = parseInt(stime/60);
-                var ssend = stime%60;
-                if (ssend<10)
-                    {
-                        ssend = "0"+ssend;
-                    }
-                var songtime = "0"+smin+":"+ssend;
-                 $("table").eq(j).append('<tr class = "startpaly"><td class = "songplay">'+oJson[i]["id"]+'</td><td>'+oJson[i]["songName"]+'</td><td>'+oJson[i]["singerName"]+'</td><td>'+songtime+'</td></tr>')
-            }
-        }
-        oJson.splice(0,listnum);
-    };
-
-    $(".tables").eq(0).css("display","table");
-}
-
-
-//上下页
-function NextPage(Pages){
-
-var dqpage = 0;
-
-$("#uppages").click(function() {
-
-    $("#uppages").css("color","#3f8dfd");
-
-
-    if( dqpage == 0){
-        alert("this is first page");
-    }
-    else{
-    $(".tables").css("display","none");
-    $(".tables").eq(dqpage - 1).css("display","table");
-    $("#labpage").html(dqpage);
-    dqpage = dqpage - 1;
-    };
-});
-
-$("#nextpages").click(function() {
-
-    $("#nextpages").css("color","#3f8dfd");
-
-    if( dqpage + 1 == Pages){
-        alert("this is end page");
-    }
-    else{
-    dqpage = dqpage + 1;
-    $(".tables").css("display","none");
-    $(".tables").eq(dqpage).css("display","table");
-    $("#labpage").html(dqpage+1);
-    };
-});
-
-}
-
-
-
-function getmatrix(a,b,c,d,e,f){
-        var aa=Math.round(180*Math.asin(a)/ Math.PI);
-        var bb=Math.round(180*Math.acos(b)/ Math.PI);
-        var cc=Math.round(180*Math.asin(c)/ Math.PI);
-        var dd=Math.round(180*Math.acos(d)/ Math.PI);
-        var deg=0;
-        if(aa==bb||-aa==bb){
-            deg=dd;
-        }else if(-aa+bb==180){
-            deg=180+cc;
-        }else if(aa+bb==180){
-            deg=360-cc||360-dd;
-        }
-        return deg>=360?0:deg;
-        //return (aa+','+bb+','+cc+','+dd);
-    }
-
-
-
 
 
 </script>

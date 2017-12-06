@@ -8,24 +8,24 @@
     <style type="text/css">
         html,body{height:100%;width: 100%;}
         #da{width:100%;height:10%;}
-        #db{width:100%;height:60%;}
+        #db1{width:100%;height:60%;}
         #dc{width:100%;height:27%;}
-        .tables {width:100%;height:63%;display:none;}
+        .tables1 {width:100%;height:63%;display:none;}
         tr{font-size:13px;height:9%;cursor:pointer;}
         tr:nth-child(odd){background-color:#eaeaea;}
-        .songplay{display:none;}
-        .songplays{display:none;}
+        .songplay1{display:none;}
+        .songplays1{display:none;}
         audio{width:100%;}
         #iframesrc{display:none;}
     </style>
 </head>
 <body>
 <div id = "da">
-<button id = "uppages">上一页</button><button id = "nextpages">下一页</button>
+<button id = "uppages1">上一页</button><button id = "nextpages1">下一页</button>
 
-<label id = "labpage">1</label>
+<label id = "labpage1">1</label>
 </div>
-<div id = "db">
+<div id = "db1">
 
 </div>
 <div id = "dc">
@@ -35,128 +35,7 @@
 </body>
 
 <script src="js/jquery.2.1.1.min.js"></script>
-<script type="text/javascript">
-
-
-$.ajax({
-  type: "get",
-  async: false,
-  url:  "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.merge&format=jsonp",
-  data:{
-    query:encodeURI('林俊杰'),
-    page_no:1,
-    page_size:50,
-    type:"-1",
-    data_source:0,
-    use_cluster:1
-  },
-  dataType: "jsonp",
-  jsonp: "callback",
-  jsonpCallback: "JsonCallback",
-  scriptCharset: 'GBK',//设置编码，否则会乱码
-  success:  function(data) {
-    alert("11111");
-  liststutas = 100;
-  var Length = data['result']['song_info']['song_list'].length; //json 长度
-
-    var listnum = 9;           //每页条数
-    var Pages =  Math.floor(Length/listnum) + 1; //页数
-    FenPages(Pages,listnum,data['result']['song_info']['song_list']);
-    NextPage(Pages);
-    var oTd = document.getElementsByClassName("songplay");
-    var oTr = document.getElementsByClassName("startpaly");
-    for(var x = 0;x<oTd.length;x++)
-    {
-        oTr[x].onclick = (function(x){
-            return function(){
-            $("#Imp3").attr('src',"");
-            var Oid = oTd[x].innerHTML;
-            var tUrl = "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.song.play&songid="+Oid;
-                $.ajax({
-                  type: "get",
-                  async: false,
-                  url:  tUrl,
-                  dataType: "jsonp",
-                  scriptCharset: 'GBK',//设置编码，否则会乱码
-                  success:  function(data) {
-                  var songUrl = data['bitrate']['file_link'];
-                  $("#Imp3").attr('src',songUrl);
-                },
-                  error: function() {
-                    alert('fail');
-                  }
-                });
-
-            };
-        })(x);
-    }
-
-//https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.merge&query=王菲
-
-//https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.song.play&songid=60430982
-
-  },
-  error: function() {
-    alert("fail");
-  }
-});
-
-function FenPages(Pages,listnum,oJson){
-    for(var j = 0;j < Pages;j++)
-    {
-        var tid = 'tb' + (j+1);
-        $("#db").append('<table class = "tables"></table>')
-        $("table").eq(j).attr('id',tid);
-        for(var i = 0;i < listnum;i++){
-            if( oJson.length < listnum){
-                   var Shengyu = oJson.length;
-                   for(var nn = 0;nn<Shengyu;nn++)
-                   {
-                    $("table").eq(j).append('<tr class = "startpaly"><td class = "songplay">'+oJson[nn]["song_id"]+'</td><td>'+oJson[nn]["title"]+'</td><td>'+oJson[nn]["author"]+'</td></tr>')
-                   }
-                   break;
-            }
-            else{
-                 $("table").eq(j).append('<tr class = "startpaly"><td class = "songplay">'+oJson[i]["song_id"]+'</td><td>'+oJson[i]["title"]+'</td><td>'+oJson[i]["author"]+'</td></tr>')
-            }
-        }
-        oJson.splice(0,listnum);
-    };
-
-    $(".tables").eq(0).css("display","table");
-}
-
-
-
-function NextPage(Pages){
-
-var dqpage = 0;
-
-$("#uppages").click(function() {
-    if( dqpage == 0){
-        alert("this is first page");
-    }
-    else{
-    $(".tables").css("display","none");
-    $(".tables").eq(dqpage - 1).css("display","table");
-    $("#labpage").html(dqpage);
-    dqpage = dqpage - 1;
-    };
-});
-
-$("#nextpages").click(function() {
-    if( dqpage + 1 == Pages){
-        alert("this is end page");
-    }
-    else{
-    dqpage = dqpage + 1;
-    $(".tables").css("display","none");
-    $(".tables").eq(dqpage).css("display","table");
-    $("#labpage").html(dqpage+1);
-    };
-});
-
-}
+<script src="js/Search.js">
 
 
 </script>
