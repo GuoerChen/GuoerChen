@@ -46,7 +46,7 @@ $.ajax({
   dataType: "jsonp",
   scriptCharset: 'GBK',//设置编码，否则会乱码
   success:  function(data) {
-  console.log(data['result']['song_info']['song_list']);
+  //console.log(data['result']['song_info']['song_list']);
 
  liststutas = 100;
   var Length = data['result']['song_info']['song_list'].length; //json 长度
@@ -65,7 +65,7 @@ $.ajax({
             var Oid = oTd[x].innerHTML;
             var tUrl = "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.song.play&songid="+Oid;
 
-               /* $.ajax({
+                $.ajax({
                   type: "get",
                   async: true,
                   url:  tUrl,
@@ -73,7 +73,7 @@ $.ajax({
                   scriptCharset: 'GBK',//设置编码，否则会乱码
                   success:  function(data) {
 
-                    console.log(data);
+                  //console.log(data);
                   var songUrl = data['bitrate']['file_link'];
                   //  $("#Imp3").attr('src',"");
                   $("#Imp3").attr('src',songUrl);
@@ -82,7 +82,7 @@ $.ajax({
                   error: function() {
                     alert('fail');
                   }
-                });*/
+                });
 
           //  $("#Imp3").attr('src',"");
            // $("#Imp3").attr('src',tUrl);
