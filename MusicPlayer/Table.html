@@ -65,7 +65,7 @@ $.ajax({
             var Oid = oTd[x].innerHTML;
             var tUrl = "https://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.song.play&songid="+Oid;
 
-                $.ajax({
+               /* $.ajax({
                   type: "get",
                   async: true,
                   url:  tUrl,
@@ -82,7 +82,7 @@ $.ajax({
                   error: function() {
                     alert('fail');
                   }
-                });
+                });*/
 
           //  $("#Imp3").attr('src',"");
            // $("#Imp3").attr('src',tUrl);
