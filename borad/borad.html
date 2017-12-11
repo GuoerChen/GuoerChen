@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>borad</title>
+    <style type="text/css">
+        #borad{width:400px;height:120px;background-color:#CCC;padding:0px;margin:0px;display:none;}
+        #left{float:left;width:350px;height:120px;padding:0px;margin:0px;}
+        #right{float:right;width:50px;height:120px;padding:0px;margin:0px;}
+        #ulrig{padding:0px;margin:0px;}
+        #ulrig > li{list-style:none;display:block;width:38px;height:38px;text-align:center;line-height:38px;border:1px solid #CCC;background-color:white;}
+        .leaves{margin:0px;padding:0px;width:350px;height:40px;}
+        .one{margin:0px;padding:0px;font-size:0px;text-align:center;}
+        .libt{display:inline-block;font-size:13px;height: 38px; width: 38px;background-color: white;line-height: 38px;    margin-right: 1px;}
+        #ulrig > li:active{background-color:red;}
+        li:active{background-color:red;}
+
+        #borade{width:400px;height:120px;background-color:#CCC;padding:0px;margin:0px;display:none;}
+        #lefte{float:left;width:350px;height:120px;padding:0px;margin:0px;}
+        #righte{float:right;width:50px;height:120px;padding:0px;margin:0px;}
+        #ulrige{padding:0px;margin:0px;}
+        #ulrige > li{list-style:none;display:block;width:36px;height:36px;text-align:center;line-height:36px;border:1px solid #CCC;background-color:white;}
+        .leavese{margin:0px;padding:0px;width:350px;height:40px;}
+        .onee{margin:0px;padding:0px;font-size:0px;text-align:center;}
+        .libte{display:inline-block;font-size:13px;height: 36px; width: 36px;background-color: white;line-height: 36px;    margin-right: 1px;}
+        #ulrige > li:active{background-color:red;}
+
+
+
+
+    </style>
+</head>
+<body>
+<div><input type="text" id = "password" placeholder="请输入。。。" /><input type="button" id = "yinchang" value = "隐藏"/></div>
+<div id = "borad">
+    <div id = "left">
+    <div id = "oneleave" class = "leaves"></div>
+    <div id = "twoleave" class = "leaves"></div>
+    <div id = "threeleave" class = "leaves"></div>
+    </div>
+    <div id = "right">
+        <ul id = "ulrig">
+            <li id = "change">ABC</li>
+            <li id = "delete">Del</li>
+            <li id = "doult" class = "libt">.</li>
+        </ul>
+    </div>
+</div>
+
+<div id = "borade">
+    <div id = "lefte">
+    <div id = "oneleavee" class = "leavese"></div>
+    <div id = "twoleavee" class = "leavese"></div>
+    <div id = "threeleavee" class = "leavese"></div>
+    </div>
+    <div id = "righte">
+        <ul id = "ulrige">
+            <li id = "changee">123</li>
+            <li id = "deletee">Del</li>
+            <li id = "Upcode" >EN</li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+</body>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$("#password").click(
+    function(){
+        $("#borad").css('display',"block");
+        $("#borade").css('display',"none");
+    });
+
+$("#yinchang").click(
+    function(){
+        $("#borad").css('display',"none");
+        $("#borade").css('display',"none");
+    });
+
+
+
+var NumArr = ['!','@','#','%','+','-','=','*','(',')',':',';','?','/',0,1,2,3,4,5,6,7,8,9];
+var CharArr = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
+shuffle(NumArr);
+shuffle(CharArr);
+
+$("#oneleave").append('<ul class = "one" id = "ones"></ul>');
+$("#twoleave").append('<ul class = "one" id = "twis"></ul>');
+$("#threeleave").append('<ul class = "one" id = "third"></ul>');
+
+
+$("#oneleavee").append('<ul class = "onee" id = "onese"></ul>');
+$("#twoleavee").append('<ul class = "onee" id = "twisee"></ul>');
+$("#threeleavee").append('<ul class = "onee" id = "thirde"></ul>');
+
+
+//加载按钮
+for(var x = 0;x<NumArr.length;x++){
+
+    if(x<8){
+        $("#ones").append('<li class = "libt">'+NumArr[x]+'</li>');
+    }
+    else if(x<16){
+        $("#twis").append('<li class = "libt">'+NumArr[x]+'</li>');
+    }
+    else{
+        $("#third").append('<li class = "libt">'+NumArr[x]+'</li>');
+    }
+}
+
+
+
+for(var x = 0;x<CharArr.length;x++){
+
+    if(x<9){
+        $("#onese").append('<li class = "libte">'+CharArr[x]+'</li>');
+    }
+    else if(x<17){
+        $("#twisee").append('<li class = "libte">'+CharArr[x]+'</li>');
+    }
+    else{
+        $("#thirde").append('<li class = "libte">'+CharArr[x]+'</li>');
+    }
+}
+
+//值输入
+var keyco = document.getElementsByClassName("libt");
+for(var n = 0;n<keyco.length;n++){
+    keyco[n].onclick = function()
+        {
+            var textcode = this.innerHTML;
+            var textcodes = $("#password").val();
+           $("#password").val(textcodes+textcode);
+
+        };
+
+}
+
+var keycoe = document.getElementsByClassName("libte");
+for(var n = 0;n<keycoe.length;n++){
+    keycoe[n].onclick = function()
+        {
+            var textcodee = this.innerHTML;
+            var textcodese = $("#password").val();
+           $("#password").val(textcodese+textcodee);
+
+        };
+
+}
+
+//删除按钮
+$("#delete").click(
+    function(){
+      var inputcodes = $("#password").val();
+      var inputcode = inputcodes.substr(0,inputcodes.length-1);
+     $("#password").val(inputcode);
+    }
+   );
+
+$("#deletee").click(
+    function(){
+      var inputcodese = $("#password").val();
+      var inputcodee = inputcodese.substr(0,inputcodese.length-1);
+     $("#password").val(inputcodee);
+    }
+   );
+
+
+
+
+//大小写转换
+var Upstatus = 100;
+$("#Upcode").click(
+    function(){
+      var status = document.getElementById("Upcode");
+      var up = document.getElementsByClassName("libte");
+      if(Upstatus == 100){
+        status.innerHTML = "en";
+         for(var c = 0;c<up.length;c++){
+           up[c].innerHTML = up[c].innerHTML.toUpperCase();
+      }
+        Upstatus =99;
+      }
+     else{
+        status.innerHTML = "EN";
+      for(var d = 0;d<up.length;d++){
+           up[d].innerHTML = up[d].innerHTML.toLowerCase();
+       }
+       Upstatus =100;
+     }
+    }
+   );
+
+//切换键盘
+$("#change").click(
+    function(){
+        $("#borad").css('display',"none");
+        $("#borade").css('display',"block");
+    });
+
+$("#changee").click(
+    function(){
+        $("#borade").css('display',"none");
+        $("#borad").css('display',"block");
+    });
+
+
+function shuffle(arr) {
+var i,j,temp;
+for (i = arr.length - 1; i > 0; i--) {
+j = Math.floor(Math.random() * (i + 1));
+temp = arr[i];
+arr[i] = arr[j];
+arr[j] = temp;
+}
+return arr;
+};
+
+</script>
+</html>
