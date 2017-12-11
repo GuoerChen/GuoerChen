@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <title>borad</title>
     <style type="text/css">
-        #borad{width:600px;height:240px;background-color:#CCC;padding:0px;margin:0px;display:none;}
-        #left{float:left;width:530px;height:240px;padding:0px;margin:0px;}
-        #right{float:right;width:70px;height:240px;padding:0px;margin:0px;}
-        #ulrig{padding:0px;margin:0px;}
-        #ulrig > li{border-radius:5px;list-style:none;display:block;width:65px;height:38px;text-align:center;line-height:38px;border:1px solid #CCC;background-color:white;}
-        .leaves{margin:0px;padding:0px;width:530px;height:40px;}
-        .one{margin:0px;padding:0px;font-size:0px;text-align:center;}
-        .libt{border-radius:5px;display:inline-block;font-size:13px;height: 38px; width: 38px;background-color: white;line-height: 38px;    margin-right: 1px;}
+        #borad{width:630px;height:210px;padding:0px;margin:0px;display:none;}
+        #left{float:left;width:540px;height:210px;padding:0px;margin:0px;margin-top:1px;}
+        #right{float:right;width:90px;height:210px;padding:0px;margin:0px;margin-top:1px;}
+        #ulrig{padding:0px;margin:0px;margin-top: 2px;}
+        #ulrig > li{border-radius:5px;list-style:none;display:block;width:86px;height:38px;text-align:center;line-height:38px;border:1px solid black;background-color:white;margin-top:1px;}
+        .leaves{margin:0px;padding:0px;width:540px;height:40px;}
+        .one{margin:0px;padding:0px;font-size:0px;text-align:center;margin-top:1px;}
+        .libt{border-radius:5px;display:inline-block;font-size:13px;height: 38px; width: 38px;background-color: white;line-height: 38px;margin-top:1px;margin-right:1px;border:1px solid black;}
         #ulrig > li:active{background-color:red;}
         li:active{background-color:red;}
 
@@ -29,7 +29,7 @@
     </div>
     <div id = "right">
         <ul id = "ulrig">
-            <li id = "Upcode">ABC</li>
+            <li id = "Upcode">EN</li>
             <li id = "delete">Del</li>
             <li id = "qued">Enter</li>
         </ul>
@@ -44,7 +44,7 @@
 <script src="https://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript">
 
-var NumArr = ['~','!','@','#','$','%','^','&','*','(',')','_','+','=','-','/','*','.',0,1,2,3,4,5,6,7,8,9,'q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m',',','.','|','[',']','{','}',';',':'];
+var NumArr = ['~','!','@','#','$','%','^','*','(',')','_','+','=','-','/','.',0,1,2,3,4,5,6,7,8,9,'q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m',',','.','|','[',']','{','}',';',':'];
 
 
 $("#oneleave").append('<ul class = "one" id = "ones"></ul>');
