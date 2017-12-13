@@ -2,7 +2,7 @@
 * @Author: Marte Chen
 * @Date:   2017-12-13 16:53:11
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-12-13 17:54:18
+* @Last Modified time: 2017-12-13 18:46:11
 */
 body{
             font-family:"Helvetica Neue",Helvetica,Arial,"Microsoft Yahei UI","Microsoft YaHei",SimHei,"\5B8B\4F53",simsun,sans-serif;
@@ -83,14 +83,14 @@ body{
         }
 
 
-        /* .tab2 img{
+         .tab2 img{
             width:40%;
             height:40%;
         }
         .tab3 img{
-            width:40%;
-            height:40%;
-        } */
+            width:65%;
+            height:65%;
+        }
         #information{
             background-color:#eee;
             padding:40px 0;
