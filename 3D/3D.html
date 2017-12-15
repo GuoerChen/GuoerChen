@@ -419,7 +419,7 @@ $(window).load(
     function(){
             Timer = setInterval(function(){
             TDTrans()
-        },3000);
+        },7000);
     }
 );
 
@@ -427,31 +427,51 @@ $(window).load(
 function TDTrans(){
         x = x + 90;
         RoTaY = 'rotateY('+x+'deg)';
-        $('.wrap').css('transition','transform 2s linear');
+        $('#fi .wrap').css('transition','transform 2s ease');
+        $('#er .wrap').css('transition','transform 3s ease');
+        $('#san .wrap').css('transition','transform 4s ease');
+        $('#si .wrap').css('transition','transform 5s ease');
+        $('#wu .wrap').css('transition','transform 6s ease');
         $('.wrap').css('transform',RoTaY);
         if(x==360){
             clearInterval(Timer);
             setTimeout(function(){
 
             RoTaX = 'rotateX('+90+'deg)';
-            $('.wrap').css('transition','transform 2s ease');
+            $('#fi .wrap').css('transition','transform 6s ease');
+            $('#er .wrap').css('transition','transform 5s ease');
+            $('#san .wrap').css('transition','transform 4s ease');
+            $('#si .wrap').css('transition','transform 3s ease');
+            $('#wu .wrap').css('transition','transform 2s ease');
             $('.wrap').css('transform',RoTaX);
 
             setTimeout(function(){
             RoTaX = 'rotateX('+270+'deg)';
-            $('.wrap').css('transition','transform 2s ease');
+            $('#fi .wrap').css('transition','transform 2s ease');
+            $('#er .wrap').css('transition','transform 3s ease');
+            $('#san .wrap').css('transition','transform 4s ease');
+            $('#si .wrap').css('transition','transform 5s ease');
+            $('#wu .wrap').css('transition','transform 6s ease');
             $('.wrap').css('transform',RoTaX);
 
             setTimeout(function(){
             RoTaX = 'rotateX('+360+'deg)';
-            $('.wrap').css('transition','transform 2s ease');
+            $('#fi .wrap').css('transition','transform 2s ease');
+            $('#er .wrap').css('transition','transform 3s ease');
+            $('#san .wrap').css('transition','transform 4s ease');
+            $('#si .wrap').css('transition','transform 5s ease');
+            $('#wu .wrap').css('transition','transform 6s ease');
             $('.wrap').css('transform',RoTaX);
 
             setTimeout(function(){
             RoTaX = 'rotateX('+0+'deg)';
             x = 0;
             RoTaY = 'rotateY('+0+'deg)';
-            $('.wrap').css('transition','transform 1s ease');
+            $('#fi .wrap').css('transition','transform 2s ease');
+            $('#er .wrap').css('transition','transform 3s ease');
+            $('#san .wrap').css('transition','transform 4s ease');
+            $('#si .wrap').css('transition','transform 5s ease');
+            $('#wu .wrap').css('transition','transform 6s ease');
 
             $('.wrap').css('transform',RoTaX);
 
@@ -461,16 +481,16 @@ function TDTrans(){
                     Timer = setInterval(
                 function(){
                     TDTrans()
-                },3000);
-            },2000);
+                },7000);
+            },7000);
 
-            },4000);
+            },8000);
 
-            },2000);
+            },7000);
 
-            },2000);
+            },7000);
 
-            },3000);
+            },8000);
 
         }
 }
