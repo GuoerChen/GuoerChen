@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>3D</title>
+    <title>回忆</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
@@ -407,121 +407,9 @@
 </div>
 </div>
 </div>
-<audio src="http://yinyueshiting.baidu.com/data2/music/d7ccf85d7459968fc48cea0539997c5e/542056358/542056358.mp3?xcode=ddf9d9e460305ad89d88bb873c3ec0e5" style="display:none" autoplay="auto">
+<audio src="http://m10.music.126.net/20171215165958/0c044e9b7623c2e8368ae20d3ae4b4bf/ymusic/df42/d10a/fb01/9cf464e75d0513aebfb80c21de44cf02.mp3" style="display:none" autoplay="auto" loop="loop">
 </audio>
 <script src="js/jquery.2.1.1.min.js"></script>
-<script type="text/javascript" >
-
-var x = 0 ;
-
-$(window).load(
-    function(){
-					
-            Timer = setInterval(function(){
-            TDTrans()
-        },7000);
-    }
-	
-);
-
-
-
-
-
-
-function TDTrans(){
-        x = x + 90;
-        RoTaY = 'rotateY('+x+'deg)';
-        $('#fi .wrap').css('transition','transform 2s ease');
-        $('#er .wrap').css('transition','transform 3s ease');
-        $('#san .wrap').css('transition','transform 4s ease');
-        $('#si .wrap').css('transition','transform 5s ease');
-        $('#wu .wrap').css('transition','transform 6s ease');
-        $('.wrap').css('transform',RoTaY);
-        if(x==360){
-            clearInterval(Timer);
-            setTimeout(function(){
-
-            RoTaX = 'rotateX('+90+'deg)';
-            $('#fi .wrap').css('transition','transform 6s ease');
-            $('#er .wrap').css('transition','transform 5s ease');
-            $('#san .wrap').css('transition','transform 4s ease');
-            $('#si .wrap').css('transition','transform 3s ease');
-            $('#wu .wrap').css('transition','transform 2s ease');
-            $('.wrap').css('transform',RoTaX);
-
-            setTimeout(function(){
-            RoTaX = 'rotateX('+270+'deg)';
-            $('#fi .wrap').css('transition','transform 2s ease');
-            $('#er .wrap').css('transition','transform 3s ease');
-            $('#san .wrap').css('transition','transform 4s ease');
-            $('#si .wrap').css('transition','transform 5s ease');
-            $('#wu .wrap').css('transition','transform 6s ease');
-            $('.wrap').css('transform',RoTaX);
-
-            setTimeout(function(){
-            RoTaX = 'rotateX('+360+'deg)';
-            $('#fi .wrap').css('transition','transform 2s ease');
-            $('#er .wrap').css('transition','transform 3s ease');
-            $('#san .wrap').css('transition','transform 4s ease');
-            $('#si .wrap').css('transition','transform 5s ease');
-            $('#wu .wrap').css('transition','transform 6s ease');
-            $('.wrap').css('transform',RoTaX);
-
-            setTimeout(function(){
-            RoTaX = 'rotateX('+0+'deg)';
-            x = 0;
-            RoTaY = 'rotateY('+0+'deg)';
-            $('#fi .wrap').css('transition','transform 2s ease');
-            $('#er .wrap').css('transition','transform 3s ease');
-            $('#san .wrap').css('transition','transform 4s ease');
-            $('#si .wrap').css('transition','transform 5s ease');
-            $('#wu .wrap').css('transition','transform 6s ease');
-
-            $('.wrap').css('transform',RoTaX);
-
-            $('.wrap').css('transform',RoTaY);
-
-            setTimeout(function(){
-                    Timer = setInterval(
-                function(){
-                    TDTrans()
-                },7000);
-            },7000);
-
-            },8000);
-
-            },7000);
-
-            },7000);
-
-            },8000);
-
-        }
-}
-
-var tdstatus = 99;
-$('#content').click(
-    function(){
-        if(tdstatus==99)
-        {
-        $('#content').css('transform-style','preserve-3d');
-        $('#content').css('transition','transform 2s ease');
-        $('#content').css('transform','rotateX(15deg) rotateY(30deg)');
-        $('#content').css('box-shadow','unset');
-        tdstatus = 100;
-        }
-        else if(tdstatus==100){
-        $('#content').css('transform-style','unset');
-        $('#content').css('transition','transform 2s ease');
-        $('#content').css('transform','rotateX(0) rotateY(0deg)');
-        $('#content').css('box-shadow','3px 3px 3px black');
-        tdstatus = 99;
-        }
-
-    }
-    );
-
-</script>
+<script src="js/trans.js"></script>
 </body>
 </html>

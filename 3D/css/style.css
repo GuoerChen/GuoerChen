@@ -2,7 +2,7 @@
 * @Author: Marte Chen
 * @Date:   2017-12-14 21:44:14
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-12-15 13:42:16
+* @Last Modified time: 2017-12-15 14:28:55
 */
 
 html{
@@ -65,56 +65,32 @@ position: absolute;
         transform: rotateY(90deg) translateZ(50px);
 }
 
-.front1-1,.front1-2,.front1-3,.front1-4,.front1-5,.front1-6,.front1-7,.front1-8,.front1-9,
-.front2-1,.front2-2,.front2-3,.front2-4,.front2-5,.front2-6,.front2-7,.front2-8,.front2-9,
-.front3-1,.front3-2,.front3-3,.front3-4,.front3-5,.front3-6,.front3-7,.front3-8,.front3-9,
-.front4-1,.front4-2,.front4-3,.front4-4,.front4-5,.front4-6,.front4-7,.front4-8,.front4-9,
-.front5-1,.front5-2,.front5-3,.front5-4,.front5-5,.front5-6,.front5-7,.front5-8,.front5-9{
-    background-image:url('../image/Front.jpg');
+.front{
+    background-image:url('../image/front0.jpg');
     background-repeat:no-repeat;
 }
 
-.left1-1,.left1-2,.left1-3,.left1-4,.left1-5,.left1-6,.left1-7,.left1-8,.left1-9,
-.left2-1,.left2-2,.left2-3,.left2-4,.left2-5,.left2-6,.left2-7,.left2-8,.left2-9,
-.left3-1,.left3-2,.left3-3,.left3-4,.left3-5,.left3-6,.left3-7,.left3-8,.left3-9,
-.left4-1,.left4-2,.left4-3,.left4-4,.left4-5,.left4-6,.left4-7,.left4-8,.left4-9,
-.left5-1,.left5-2,.left5-3,.left5-4,.left5-5,.left5-6,.left5-7,.left5-8,.left5-9{
-    background-image:url('../image/left.jpg');
+.left{
+    background-image:url('../image/left0.jpg');
     background-repeat:no-repeat;
 }
-.back1-1,.back1-2,.back1-3,.back1-4,.back1-5,.back1-6,.back1-7,.back1-8,.back1-9,
-.back2-1,.back2-2,.back2-3,.back2-4,.back2-5,.back2-6,.back2-7,.back2-8,.back2-9,
-.back3-1,.back3-2,.back3-3,.back3-4,.back3-5,.back3-6,.back3-7,.back3-8,.back3-9,
-.back4-1,.back4-2,.back4-3,.back4-4,.back4-5,.back4-6,.back4-7,.back4-8,.back4-9,
-.back5-1,.back5-2,.back5-3,.back5-4,.back5-5,.back5-6,.back5-7,.back5-8,.back5-9{
-    background-image:url('../image/back.jpg');
+.back{
+    background-image:url('../image/back0.jpg');
     background-repeat:no-repeat;
 }
-.right1-1,.right1-2,.right1-3,.right1-4,.right1-5,.right1-6,.right1-7,.right1-8,.right1-9,
-.right2-1,.right2-2,.right2-3,.right2-4,.right2-5,.right2-6,.right2-7,.right2-8,.right2-9,
-.right3-1,.right3-2,.right3-3,.right3-4,.right3-5,.right3-6,.right3-7,.right3-8,.right3-9,
-.right4-1,.right4-2,.right4-3,.right4-4,.right4-5,.right4-6,.right4-7,.right4-8,.right4-9,
-.right5-1,.right5-2,.right5-3,.right5-4,.right5-5,.right5-6,.right5-7,.right5-8,.right5-9{
-    background-image:url('../image/right.jpg');
+.right{
+    background-image:url('../image/right0.jpg');
     background-repeat:no-repeat;
 }
 
-.top1-1,.top1-2,.top1-3,.top1-4,.top1-5,.top1-6,.top1-7,.top1-8,.top1-9,
-.top2-1,.top2-2,.top2-3,.top2-4,.top2-5,.top2-6,.top2-7,.top2-8,.top2-9,
-.top3-1,.top3-2,.top3-3,.top3-4,.top3-5,.top3-6,.top3-7,.top3-8,.top3-9,
-.top4-1,.top4-2,.top4-3,.top4-4,.top4-5,.top4-6,.top4-7,.top4-8,.top4-9,
-.top5-1,.top5-2,.top5-3,.top5-4,.top5-5,.top5-6,.top5-7,.top5-8,.top5-9{
-    background-image:url('../image/top.jpg');
+.top{
+    background-image:url('../image/top0.jpg');
     background-repeat:no-repeat;
 }
 
 
-.bottom1-1,.bottom1-2,.bottom1-3,.bottom1-4,.bottom1-5,.bottom1-6,.bottom1-7,.bottom1-8,.bottom1-9,
-.bottom2-1,.bottom2-2,.bottom2-3,.bottom2-4,.bottom2-5,.bottom2-6,.bottom2-7,.bottom2-8,.bottom2-9,
-.bottom3-1,.bottom3-2,.bottom3-3,.bottom3-4,.bottom3-5,.bottom3-6,.bottom3-7,.bottom3-8,.bottom3-9,
-.bottom4-1,.bottom4-2,.bottom4-3,.bottom4-4,.bottom4-5,.bottom4-6,.bottom4-7,.bottom4-8,.bottom4-9,
-.bottom5-1,.bottom5-2,.bottom5-3,.bottom5-4,.bottom5-5,.bottom5-6,.bottom5-7,.bottom5-8,.bottom5-9{
-    background-image:url('../image/bottom.jpg');
+.bottom{
+    background-image:url('../image/bottom0.jpg');
     background-repeat:no-repeat;
 }
 
