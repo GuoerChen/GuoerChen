@@ -2,12 +2,13 @@
 * @Author: Marte Chen
 * @Date:   2017-12-15 14:27:21
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-12-15 15:45:55
+* @Last Modified time: 2017-12-15 17:39:13
 */
 
 
 var x = 0 ;
 var y = 0 ;
+var z = 0 ;
 
 $(window).load(
     function(){
@@ -120,24 +121,95 @@ function TDTrans(){
         }
 }
 
-var tdstatus = 99;
-$('#content').click(
+
+$('#big').mousedown(
     function(){
-        if(tdstatus==99)
+        if(z==360)
         {
-        $('#content').css('transform-style','preserve-3d');
-        $('#content').css('transition','transform 2s ease');
-        $('#content').css('transform','rotateX(15deg) rotateY(30deg)');
-        $('#content').css('box-shadow','unset');
-        tdstatus = 100;
+          z = 360;
+          clearInterval(times2);
         }
-        else if(tdstatus==100){
+        else{
+        z = z + 20;
+        rotx = 'rotateX('+z+'deg) rotateY('+z+'deg)';
+        $('#content').css('transform-style','preserve-3d');
+        $('#content').css('transition','transform 1s linear');
+        $('#content').css('transform',rotx);
+        $('#content').css('box-shadow','unset');
+        }
+        //启动定时器
+        times2 = setInterval(
+        function(){
+         if(z==360)
+        {
+          z = 360;
+          clearInterval(times2);
+        }
+        else{
+        z = z + 20;
+        rotx = 'rotateX('+z+'deg) rotateY('+z+'deg)';
+        $('#content').css('transform-style','preserve-3d');
+        $('#content').css('transition','transform 1s linear');
+        $('#content').css('transform',rotx);
+        $('#content').css('box-shadow','unset');
+        }
+        },1000)
+    });
+
+$('#big').mouseup(
+function(){
+    clearInterval(times2);
+});
+
+
+$('#small').mousedown(
+    function(){
+
+        if(z==0)
+        {
+        z = 0;
+        clearInterval(times3);
         $('#content').css('transform-style','unset');
-        $('#content').css('transition','transform 2s ease');
+        $('#content').css('transition','transform 1s linear');
         $('#content').css('transform','rotateX(0) rotateY(0deg)');
         $('#content').css('box-shadow','3px 3px 3px black');
-        tdstatus = 99;
+
+        }
+        else{
+        z = z - 20;
+        rotx = 'rotateX('+z+'deg) rotateY('+z+'deg)';
+        $('#content').css('transform-style','preserve-3d');
+        $('#content').css('transition','transform 1s linear');
+        $('#content').css('transform',rotx);
+        $('#content').css('box-shadow','unset');
         }
 
-    }
-    );
+        //启动定时器
+        times3 = setInterval(
+        function(){
+         if(z==0)
+        {
+        z = 0;
+        clearInterval(times3);
+        $('#content').css('transform-style','unset');
+        $('#content').css('transition','transform 1s linear');
+        $('#content').css('transform','rotateX(0) rotateY(0deg)');
+        $('#content').css('box-shadow','3px 3px 3px black');
+
+        }
+        else{
+        z = z - 20;
+        rotx = 'rotateX('+z+'deg) rotateY('+z+'deg)';
+        $('#content').css('transform-style','preserve-3d');
+        $('#content').css('transition','transform 1s linear');
+        $('#content').css('transform',rotx);
+        $('#content').css('box-shadow','unset');
+        }
+        },1000);
+
+    });
+
+$('#small').mouseup(
+function(){
+    clearInterval(times3);
+});
