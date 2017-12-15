@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-<button style = "width:100px;height:50px">3D</button>
 <div id = "content">
 <div id = "fi">
 <div class="wrap disinline">
@@ -417,11 +416,17 @@ var x = 0 ;
 
 $(window).load(
     function(){
+					
             Timer = setInterval(function(){
             TDTrans()
         },7000);
     }
+	
 );
+
+
+
+
 
 
 function TDTrans(){
@@ -496,7 +501,7 @@ function TDTrans(){
 }
 
 var tdstatus = 99;
-$('button').click(
+$('#content').click(
     function(){
         if(tdstatus==99)
         {
@@ -504,7 +509,6 @@ $('button').click(
         $('#content').css('transition','transform 2s ease');
         $('#content').css('transform','rotateX(15deg) rotateY(30deg)');
         $('#content').css('box-shadow','unset');
-        $('button').html('2D');
         tdstatus = 100;
         }
         else if(tdstatus==100){
@@ -512,7 +516,6 @@ $('button').click(
         $('#content').css('transition','transform 2s ease');
         $('#content').css('transform','rotateX(0) rotateY(0deg)');
         $('#content').css('box-shadow','3px 3px 3px black');
-        $('button').html('3D');
         tdstatus = 99;
         }
 
