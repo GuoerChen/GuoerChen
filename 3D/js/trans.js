@@ -213,3 +213,7 @@ $('#small').mouseup(
 function(){
     clearInterval(times3);
 });
+
+
+
+
