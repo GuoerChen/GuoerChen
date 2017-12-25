@@ -8,13 +8,33 @@
             margin:0px;padding:0px;font-family:"Helvetica Neue",Helvetica,Arial,"Microsoft Yahei UI","Microsoft YaHei",SimHei,"\5B8B\4F53",simsun,sans-serif;
             color:#666;height:100%;width:100%;font-size:18px;
         }
+        div{margin:0 auto;width:500px;height:300px;}
+        canvas{ width:300px;height:300px}
+
 
     </style>
 
 </head>
 <body>
-<div style = "width:300px;height:300px">
-<canvas id="myChart" width="300px" height="300px"></canvas>
+<div>
+<canvas id="myChart1"></canvas>
+</div>
+
+
+<div>
+<canvas id="myChart3"></canvas>
+</div>
+
+<div>
+<canvas id="myChart2"></canvas>
+</div>
+
+<div>
+<canvas id="myChart4" ></canvas>
+</div>
+
+<div>
+<canvas id="myChart5"></canvas>
 </div>
 
 </body>
@@ -23,7 +43,8 @@
 <script type="text/javascript" src="js/jquery.2.1.1.min.js"></script>
 <script type="text/javascript">
 
-var ctx = document.getElementById("myChart").getContext('2d');
+//环状图
+var ctx = document.getElementById("myChart1").getContext('2d');
 data = {
     datasets: [{
         data: [20000, 9000, 999],
@@ -44,6 +65,123 @@ data = {
 var myDoughnutChart = new Chart(ctx, {
     type: 'doughnut',
     data: data,
+});
+
+//Pai图
+var ctx = document.getElementById("myChart3").getContext('2d');
+data = {
+    datasets: [{
+        data: [20000, 9000, 999],
+        backgroundColor:['#53a543','#2dc4f3','orange'],//饼的颜色
+        //borderColor:[], //边的颜色
+        borderWidth:[2,2,2] //边的宽度
+    }],
+
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+    labels: [
+        '会员',
+        '商家',
+        '推荐'
+    ]
+
+};
+
+var myDoughnutChart1 = new Chart(ctx, {
+    type: 'pie',
+    data: data,
+});
+
+
+
+//柱形图
+var ctx2 = document.getElementById("myChart2").getContext('2d');
+var myChart2 = new Chart(ctx2, {
+    type: 'bar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 15, 8, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+
+//极地图
+
+data = {
+    datasets: [{
+        data: [10, 20, 30],//数据
+        backgroundColor:['#53a543','#2dc4f3','orange'],//饼的颜色
+        //borderColor:[], //边的颜色
+        borderWidth:[2,2,2] //边的宽度
+    }],
+
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+    labels: [
+        'Red',
+        'Yellow',
+        'Blue'
+    ]
+};
+
+var ctx4 = document.getElementById("myChart4").getContext('2d');
+
+var myChart2  = new Chart(ctx4, {
+    data: data,
+    type: 'polarArea'
+});
+
+//曲线图
+//
+var data5 = {
+    labels : ["January","February","March","April","May"],
+    datasets : [
+        {   label:'First',
+            backgroundColor:'rgba(255, 99, 132, 0.2)',
+            borderColor:'rgba(255, 99, 132, 0.8)',
+            data : [65,59,90,81,56]
+        },
+        {
+            label:'Thild',
+            backgroundColor:'rgba(122, 199, 132, 0.2)',
+            borderColor:'rgba(122, 199, 132, 0.8)',
+            data : [28,48,40,19,96]
+        }
+    ]
+}
+
+var ctx5 = document.getElementById("myChart5").getContext('2d');
+
+var myChart5  = new Chart(ctx5, {
+    data: data5,
+    type: 'line'
 });
 
 </script>
