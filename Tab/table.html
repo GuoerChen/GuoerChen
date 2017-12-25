@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>detail</title>
+    <style type="text/css">
+        html,body{
+            margin:0px;padding:0px;font-family:"Helvetica Neue",Helvetica,Arial,"Microsoft Yahei UI","Microsoft YaHei",SimHei,"\5B8B\4F53",simsun,sans-serif;
+            color:#666;height:100%;width:100%;font-size:18px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div style = "width:300px;height:300px">
+<canvas id="myChart" width="300px" height="300px"></canvas>
+</div>
+
+</body>
+<script type="text/javascript" src="js/Chart.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/jquery.2.1.1.min.js"></script>
+<script type="text/javascript">
+
+var ctx = document.getElementById("myChart").getContext('2d');
+data = {
+    datasets: [{
+        data: [20000, 9000, 999],
+        backgroundColor:['#53a543','#2dc4f3','orange'],//饼的颜色
+        //borderColor:[], //边的颜色
+        borderWidth:[2,2,2] //边的宽度
+    }],
+
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+    labels: [
+        '会员',
+        '商家',
+        '推荐'
+    ]
+
+};
+
+var myDoughnutChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: data,
+});
+
+</script>
+</html>

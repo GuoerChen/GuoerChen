@@ -51,6 +51,8 @@
         ul li:nth-child(1) {margin-top: 10px;}
         .back{display:inline-block;margin-left:20px;height:100%;color:#6565f6;}
         .title{display:inline-block;height:100%;position:absolute;left:50%;}
+        #myChart{width: 100%;height: 100%;     margin-top: 25px;}
+
     </style>
 </head>
 <body>
@@ -73,15 +75,17 @@ font-size: 35px;color: green;">29999.00</p></div>
 
 </div>
 <div class ="content4">
-    <div style = "width: 60%;">
+    <div style = "width: 50%;">
         <ul style ="padding: 15px 0 0 20px;;margin: 0px;list-style:none">
             <li><span style = "color: #53a543;font-size: 18px;vertical-align: text-bottom;">■</span><span style ="margin: 0 5px;font-size: 18px;color: black;">会员收益:</span><span style ="font-size:15px">20000.00</span></li>
-            <li><span style = "color: blue;font-size: 18px;vertical-align: text-bottom;">■</span><span style ="margin: 0 5px;font-size: 18px;color: black;">商家收益:</span><span style ="font-size:15px">9000.00</span></li>
+            <li><span style = "color: #2dc4f3;font-size: 18px;vertical-align: text-bottom;">■</span><span style ="margin: 0 5px;font-size: 18px;color: black;">商家收益:</span><span style ="font-size:15px">9000.00</span></li>
             <li><span style = "color: orange;font-size: 18px;vertical-align: text-bottom;">■</span><span style ="margin: 0 5px;font-size: 18px;color: black;">推荐收益:</span><span style ="font-size:15px">999.00</span></li>
         </ul>
     </div>
-    <div style = "width: 40%;">
-        <div style="width:100%;height:45%;"></div>
+    <div style = "width: 50%;">
+        <div style="width:100%;height:80%;">
+            <canvas id="myChart" ></canvas>
+        </div>
     </div>
 </div>
 
@@ -89,6 +93,8 @@ font-size: 35px;color: green;">29999.00</p></div>
 </div>
 
 </body>
+<script type="text/javascript" src="js/Chart.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
 <script type="text/javascript" src="js/jquery.2.1.1.min.js"></script>
 <script type="text/javascript">
 var cont1height = $(".content1").css('height');
@@ -100,5 +106,26 @@ $(".title").css("margin-left",0 - (parseInt(titlewidth)/2)+"px");
 var secheight = $(".sec div").css('height');
 $(".sec").css("line-height",parseInt(secheight)+"px");
 
+
+//环状图
+var ctx = document.getElementById("myChart").getContext('2d');
+data = {
+    datasets: [{
+        data: [20000, 9000, 999],
+        backgroundColor:['#53a543','#2dc4f3','orange'],//饼的颜色
+        //borderColor:[], //边的颜色
+        borderWidth:[1,1,1] //边的宽度
+    }]
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+   /* labels: [
+        '会员',
+        '商家',
+        '推荐'
+    ]*/
+};
+var myDoughnutChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: data,
+});
 </script>
 </html>
