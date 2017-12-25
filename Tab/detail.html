@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>detail</title>
+    <style type="text/css">
+        html,body{
+            margin:0px;padding:0px;font-family:"Helvetica Neue",Helvetica,Arial,"Microsoft Yahei UI","Microsoft YaHei",SimHei,"\5B8B\4F53",simsun,sans-serif;
+            color:#666;height:100%;width:100%;font-size:14px;
+        }
+        .content{
+            margin:0px;padding:0px;
+            display:flex;
+            flex-direction:column;background-color:#f9f9f9;
+            height:100%;width:100%;
+        }
+        .content1,.content2,.content3,.content4{margin:0px;width:100%;}
+        .content1{
+            height:5%;background-color:white;
+        }
+        .content2{
+            height:7%;background-color:white;margin-top:1px;display:flex;flex-direction:row;
+        }
+        .content2 div {
+            margin:0px;padding:0px;height:100%;width:50%;
+        }
+        .sec div {
+                width: 26%;height: 93%;border-bottom: 3px solid green;margin-left: 10px;font-size:16px;text-align:center;
+        }
+        .icon{height:80%;float: right;margin: 5px;}
+        .content3{
+            height:30%;background-color:white;margin-top:1px;display:flex;flex-direction:column;
+        }
+        .content3 div {width:100%;}
+
+        .moneys{display:flex;flex-direction:row; height:80%;}
+
+        .moneys div {width:25%;margin: 10px;
+        }
+        .moneys img{
+            height:60%;margin-top: 30px;margin-left: 20px;
+        }
+        .content4{
+            height:58%;background-color:white;margin-top:1px;display:flex;flex-direction:row;
+        }
+        .content4 div {width: 50%;height:100%}
+        ul li {margin-bottom: 15px;}
+        .back{display:inline-block;margin-left:10px;height:100%;color:#6565f6;}
+        .title{display:inline-block;height:100%;position:absolute;left:50%;}
+    </style>
+</head>
+<body>
+<div class="content">
+<div class ="content1">
+    <span class ="back">< 返回</span>
+    <span class = "title">账户明细</span>
+</div>
+<div class ="content2">
+    <div class = "sec"><div>本年 ∨</div></div>
+    <div class = "cal"><img class = "icon" src="img/calender.png" alt="" /></div>
+</div>
+<div class ="content3">
+    <div class = "moneys">
+        <div><img src="img/money.png" alt="" /></div>
+        <div><p style="margin: 40px 0 0 0;">总收益 (元)</p><p style = "margin: 10px 0 0 0;
+font-size: 25px;color: green;">29999.00</p></div>
+    </div>
+    <div style ="padding-left: 10px;font-size: 15px;border-top:1px solid #f9f9f9;padding-top: 8px;"><span>日期:</span><span style ="margin-left:10px">2017.12.25 - 2017.12.25</span></div>
+
+</div>
+<div class ="content4">
+    <div>
+        <ul style ="padding: 15px 0 0 10px;;margin: 0px;list-style:none">
+            <li><span style = "color: #53a543;font-size: 18px;vertical-align: text-bottom;">■</span><span style ="margin: 0 10px;font-size: 15px;color: black;">会员收益:</span><span style ="font-size:13px">20000.00</span></li>
+            <li><span style = "color: blue;font-size: 18px;vertical-align: text-bottom;">■</span><span style ="margin: 0 10px;font-size: 15px;color: black;">商家收益:</span><span style ="font-size:13px">9000.00</span></li>
+            <li><span style = "color: orange;font-size: 18px;vertical-align: text-bottom;">■</span><span style ="margin: 0 10px;font-size: 15px;color: black;">推荐收益:</span><span style ="font-size:13px">999.00</span></li>
+        </ul>
+    </div>
+    <div>
+        <div style="width:100%;height:45%;padding:20px 0 0 20px;
+};">123</div>
+    </div>
+</div>
+
+
+</div>
+
+</body>
+<script type="text/javascript" src="js/jquery.2.1.1.min.js"></script>
+<script type="text/javascript">
+var cont1height = $(".content1").css('height');
+$(".content1").css("line-height",parseInt(cont1height)+"px");
+
+var titlewidth = $(".title").css('width');
+$(".title").css("margin-left",0 - (parseInt(titlewidth)/2)+"px");
+
+var secheight = $(".sec div").css('height');
+$(".sec").css("line-height",parseInt(secheight)+"px");
+
+</script>
+</html>
