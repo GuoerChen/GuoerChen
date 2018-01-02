@@ -8,8 +8,8 @@
         table{border:1px solid #666;border-collapse:collapse;}
         th{border:1px solid black;}
         th{border-bottom:2px solid black;}
-        th span{    margin-top: 20px;    display: block;    margin-left: 90px;}
-        td{border:1px dashed #CCC;    width: 10px;   height: 10px;}
+        th span{    margin-top: 15px;    display: block;    margin-left: 90px;}
+        td{border:1px dashed #ccc;    width: 10px;   height: 10px;}
         .solid{ border-right:1px solid black; }
         .bottoms td {border-bottom:2px solid black;}
 
@@ -25,6 +25,13 @@
         .bottoms td:nth-child(10){border-bottom:1px dashed #CCC;}
         .bottoms td:nth-child(74){border-bottom:1px dashed #CCC;}
 
+        tr td:nth-child(11){width:9px;}
+        tr td:nth-child(29){width:9px;}
+        /*tr td:nth-child(38){width:9px;}
+        tr td:nth-child(47){width:9px;}
+
+        tr td:nth-child(65){width:9px;}
+        tr td:nth-child(73){width:9px;} */
 
         .weather{ height: 11px;    position: absolute;   margin-top: -6px;}
         .d0{color: white;    font-size: 10px;    background-color: #666;    text-align: center;    padding: 0px;    margin: 0px;    width: 12px;    height: 12px;    line-height: 12px;
@@ -32,6 +39,8 @@
         .d1{color: black;    background-color: white;    width: 10px;    height: 10px;    line-height: 12px; border:1px solid black;}
 
         .spans{transform: scale(0.9);display: block;}
+        .spanst{transform: scale(0.8);display: block;font-size: 12px;height: 5px;margin-top: -8px;position:absolute;}
+        .st{margin-top:-1px;}
 
         @media screen and (-webkit-min-device-pixel-ratio:0) {
                     /* Chrome- and Safari-specific CSS here*/
@@ -44,7 +53,7 @@
 <table>
     <thead>
         <tr>
-            <th colspan="10">rili</th>
+            <th colspan="10">手帐</th>
             <th colspan="9"><span>MON</span></th>
             <th colspan="9"><span>TUE</span></th>
             <th colspan="9"><span>WED</span></th>
@@ -134,13 +143,13 @@
         </tr>
                   <tr class = "bottoms">
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><span class = "spanst">一</span></td>
+            <td><span class = "spanst">二</span></td>
+            <td><span class = "spanst">三</span></td>
+            <td><span class = "spanst">四</span></td>
+            <td><span class = "spanst">五</span></td>
+            <td><span class = "spanst">六</span></td>
+            <td><span class = "spanst">日</span></td>
             <td></td>
             <td class = "solid"></td>
             <td><div class ="d0"><span class = "spans">0</span></div></td>
@@ -675,7 +684,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">7</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">7</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -684,7 +693,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">7</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">7</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -693,7 +702,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">7</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">7</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -702,7 +711,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">7</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">7</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -711,7 +720,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">7</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">7</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -720,7 +729,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">7</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">7</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -729,7 +738,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">7</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">7</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -738,7 +747,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">7</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">7</span></div></td>
         </tr>
                   <tr>
             <td></td>
@@ -827,7 +836,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">8</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">8</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -836,7 +845,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">8</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">8</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -845,7 +854,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">8</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">8</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -854,7 +863,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">8</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">8</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -863,7 +872,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">8</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">8</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -872,7 +881,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">8</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">8</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -881,7 +890,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">8</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">8</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -890,165 +899,13 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">8</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">8</span></div></td>
         </tr>
                   <tr>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-        </tr>
-                  <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">9</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">9</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">9</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">9</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">9</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">9</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">9</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">9</span></div></td>
-        </tr>
-                  <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1131,7 +988,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">10</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">9</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1140,7 +997,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">10</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">9</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1149,7 +1006,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">10</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">9</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1158,7 +1015,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">10</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">9</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1167,7 +1024,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">10</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">9</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1176,7 +1033,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">10</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">9</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1185,7 +1042,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">10</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">9</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1194,7 +1051,83 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">10</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">9</span></div></td>
+        </tr>
+                  <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td></td>
         </tr>
                   <tr>
             <td></td>
@@ -1207,6 +1140,82 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
+            <td><div class ="d0 d1"><span class = "spans st">10</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td><div class ="d0 d1"><span class = "spans st">10</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td><div class ="d0 d1"><span class = "spans st">10</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td><div class ="d0 d1"><span class = "spans st">10</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td><div class ="d0 d1"><span class = "spans st">10</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td><div class ="d0 d1"><span class = "spans st">10</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td><div class ="d0 d1"><span class = "spans st">10</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td><div class ="d0 d1"><span class = "spans st">10</span></div></td>
+        </tr>
+                  <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1283,7 +1292,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">11</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">11</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1292,7 +1301,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">11</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">11</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1301,7 +1310,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">11</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">11</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1310,7 +1319,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">11</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">11</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1319,7 +1328,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">11</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">11</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1328,7 +1337,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">11</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">11</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1337,7 +1346,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">11</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">11</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1346,13 +1355,13 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">11</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">11</span></div></td>
         </tr>
                   <tr>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1435,7 +1444,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">12</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">12</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1444,7 +1453,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">12</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">12</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1453,7 +1462,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">12</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">12</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1462,7 +1471,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">12</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">12</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1471,7 +1480,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">12</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">12</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1480,7 +1489,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">12</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">12</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1489,7 +1498,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">12</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">12</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1498,165 +1507,13 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">12</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">12</span></div></td>
         </tr>
                   <tr>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-        </tr>
-                  <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">13</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">13</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">13</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">13</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">13</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">13</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">13</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">13</span></div></td>
-        </tr>
-                  <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1739,7 +1596,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">14</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">13</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1748,7 +1605,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">14</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">13</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1757,7 +1614,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">14</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">13</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1766,7 +1623,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">14</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">13</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1775,7 +1632,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">14</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">13</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1784,7 +1641,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">14</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">13</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1793,7 +1650,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">14</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">13</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1802,165 +1659,13 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">14</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">13</span></div></td>
         </tr>
                   <tr>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-        </tr>
-                  <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">15</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">15</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">15</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">15</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">15</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">15</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">15</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">15</span></div></td>
-        </tr>
-                  <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2043,7 +1748,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">16</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">14</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2052,7 +1757,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">16</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">14</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2061,7 +1766,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">16</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">14</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2070,7 +1775,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">16</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">14</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2079,7 +1784,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">16</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">14</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2088,7 +1793,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">16</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">14</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2097,7 +1802,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">16</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">14</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2106,7 +1811,83 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">16</span></div></td>
+            <td><div class ="d0 d1"><span class = "spans st">14</span></div></td>
+        </tr>
+                  <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td></td>
         </tr>
                   <tr>
             <td></td>
@@ -2119,6 +1900,82 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
+            <td><div class ="d0 d1"><span class = "spans st">15</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td><div class ="d0 d1"><span class = "spans st">15</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td><div class ="d0 d1"><span class = "spans st">15</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td><div class ="d0 d1"><span class = "spans st">15</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td><div class ="d0 d1"><span class = "spans st">15</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td><div class ="d0 d1"><span class = "spans st">15</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td><div class ="d0 d1"><span class = "spans st">15</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td><div class ="d0 d1"><span class = "spans st">15</span></div></td>
+        </tr>
+                  <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2195,7 +2052,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">17</span></div></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">16</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2204,7 +2061,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">17</span></div></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">16</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2213,7 +2070,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">17</span></div></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">16</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2222,7 +2079,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">17</span></div></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">16</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2231,7 +2088,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">17</span></div></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">16</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2240,7 +2097,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">17</span></div></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">16</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2249,7 +2106,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">17</span></div></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">16</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2258,7 +2115,83 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">17</span></div></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">16</span></div></td>
+        </tr>
+                  <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
         </tr>
                   <tr>
             <td></td>
@@ -2271,16 +2204,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">17</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2289,16 +2213,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">17</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2307,16 +2222,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">17</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2325,7 +2231,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">17</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2334,7 +2240,110 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">17</span></div></td>
             <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">17</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">17</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">17</span></div></td>
+        </tr>
+                  <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
         </tr>
                   <tr class = "bottoms">
             <td></td>
@@ -2347,7 +2356,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">18</span></div></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">18</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2356,7 +2365,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">18</span></div></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">18</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2365,7 +2374,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">18</span></div></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">18</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2374,7 +2383,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">18</span></div></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">18</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2383,7 +2392,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">18</span></div></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">18</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2392,7 +2401,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">18</span></div></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">18</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2401,7 +2410,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">18</span></div></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">18</span></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2410,7 +2419,83 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">18</span></div></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">18</span></div></td>
+        </tr>
+                  <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
         </tr>
                   <tr>
             <td></td>
@@ -2423,6 +2508,842 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">19</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">19</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">19</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">19</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">19</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">19</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">19</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">19</span></div></td>
+        </tr>
+                  <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+        </tr>
+                  <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">20</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">20</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">20</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">20</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">20</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">20</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">20</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">20</span></div></td>
+        </tr>
+                  <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+        </tr>
+                  <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">21</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">21</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">21</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">21</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">21</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">21</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">21</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">21</span></div></td>
+        </tr>
+                  <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+        </tr>
+                  <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">22</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">22</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">22</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">22</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">22</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">22</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">22</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">22</span></div></td>
+        </tr>
+                  <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+        </tr>
+                  <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">23</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">23</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">23</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">23</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">23</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">23</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">23</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">23</span></div></td>
+        </tr>
+                  <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"></td>
+        </tr>
+                  <tr class ="bottoms">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">24</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">24</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">24</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">24</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">24</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">24</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">24</span></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-left:2px solid black"><div class ="d0 d1"><span class = "spans st">24</span></div></td>
+        </tr>
+                  <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2499,7 +3420,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">19</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/1.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2508,7 +3429,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">19</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/1.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2517,7 +3438,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">19</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/1.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2526,7 +3447,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">19</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/1.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2535,7 +3456,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">19</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/1.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2544,7 +3465,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">19</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/1.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2553,83 +3474,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">19</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">19</span></div></td>
-        </tr>
-                  <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/1.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2644,23 +3489,14 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">20</span></div></td>
-            <td></td>
-            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">20</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/5.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2669,7 +3505,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">20</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/5.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2678,7 +3514,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">20</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/5.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2687,7 +3523,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">20</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/5.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2696,7 +3532,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">20</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/5.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2705,7 +3541,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">20</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/5.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2714,74 +3550,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">20</span></div></td>
-        </tr>
-                  <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/5.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2792,7 +3561,7 @@
             <td class = "solid"></td>
             <td></td>
         </tr>
-                  <tr>
+                  <tr class ="bottoms">
             <td></td>
             <td></td>
             <td></td>
@@ -2803,7 +3572,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">21</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/6.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2812,7 +3581,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">21</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/6.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2821,7 +3590,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">21</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/6.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2830,7 +3599,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">21</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/6.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2839,7 +3608,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">21</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/6.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2848,7 +3617,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">21</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/6.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2857,83 +3626,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">21</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">21</span></div></td>
-        </tr>
-                  <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/6.png" alt="" /></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2948,235 +3641,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">22</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">22</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">22</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">22</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">22</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">22</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">22</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">22</span></div></td>
-        </tr>
-                  <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-        </tr>
-                  <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">23</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">23</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">23</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">23</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">23</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">23</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">23</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">23</span></div></td>
-        </tr>
-                  <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3259,7 +3724,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">24</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/8.png" alt="" ></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3268,7 +3733,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">24</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/8.png" alt="" ></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3277,7 +3742,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">24</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/8.png" alt="" ></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3286,7 +3751,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">24</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/8.png" alt="" ></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3295,7 +3760,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">24</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/8.png" alt="" ></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3304,7 +3769,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">24</span></div></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/8.png" alt="" ></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3313,83 +3778,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">24</span></div></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td><div class ="d0 d1"><span class = "spans">24</span></div></td>
-        </tr>
-                  <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/8.png" alt="" ></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3404,83 +3793,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-        </tr>
-                  <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3563,16 +3876,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/7.png" alt="" ></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3581,16 +3885,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/7.png" alt="" ></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3599,16 +3894,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/7.png" alt="" ></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3617,7 +3903,34 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/7.png" alt="" ></td>
             <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/7.png" alt="" ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/7.png" alt="" ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class = "solid"></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black"><img class = "weather" src="img/7.png" alt="" ></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3632,83 +3945,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-        </tr>
-                  <tr class ="bottoms">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3791,16 +4028,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black;border-bottom:1px solid black"><img class = "weather" style = "height:12px;width:14px;margin-left: -1px;" src="img/11.png" alt="" ></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3809,16 +4037,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black;border-bottom:1px solid black"><img class = "weather" style = "height:12px;width:14px;margin-left: -1px;" src="img/11.png" alt="" ></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3827,16 +4046,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black;border-bottom:1px solid black"><img class = "weather" style = "height:12px;width:14px;margin-left: -1px;" src="img/11.png" alt="" ></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3845,20 +4055,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-        </tr>
-                  <tr class ="bottoms">
-            <td></td>
-            <td></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black;border-bottom:1px solid black"><img class = "weather" style = "height:12px;width:14px;margin-left: -1px;" src="img/11.png" alt="" ></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3867,16 +4064,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black;border-bottom:1px solid black"><img class = "weather" style = "height:12px;width:14px;margin-left: -1px;" src="img/11.png" alt="" ></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3885,16 +4073,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black;border-bottom:1px solid black"><img class = "weather" style = "height: 12px;width:14px;margin-left: -1px;" src="img/11.png" alt="" ></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3903,25 +4082,7 @@
             <td></td>
             <td></td>
             <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
+            <td style = "border-right:1px solid black;border-top:1px solid black;border-bottom:1px solid black"><img class = "weather" style = "height: 12px;width:14px;margin-left: -1px;" src="img/11.png" alt="" ></td>
             <td></td>
             <td></td>
             <td></td>
@@ -3936,159 +4097,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-        </tr>
-                  <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class = "solid"></td>
-            <td></td>
-        </tr>
-                  <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><div style = "width: 13px;height: 12px;border: 1px solid black;position: absolute;margin-top: -7px;margin-left: -2px;"></div></td>
             <td></td>
             <td></td>
             <td></td>
