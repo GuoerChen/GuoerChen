@@ -21,6 +21,11 @@
     table th{text-align:center;}
     table td{text-align:center;}
     .status{color:red;}
+    .inp1{margin-right:10px;}
+    .inp2{margin-right:20px;}
+    .mar-top{margin-top:10px;}
+    .mar-top1{margin-top:40px;text-align:center;}
+    .btn-froms{margin-left:10%;}
     </style>
 </head>
 <body>
@@ -34,157 +39,251 @@
     <ul id="myTab" class="nav nav-tabs">
     <li class="active">
         <a href="#home" data-toggle="tab">
-            待审批 <span class="badge ">3</span>
+            基本信息
         </a>
 
     </li>
-    <li><a href="#ios" data-toggle="tab">已审批</a> </li>
+    <li><a href="#ios" data-toggle="tab">修改信息</a> </li>
 </ul>
 <div id="myTabContent" class="tab-content">
     <div class="tab-pane fade in active" id="home">
         <table class="table table-hover table-bordered table-condensed">
-            <caption>待审批事件,请尽快处理 更新于2017/12/28 14:23:00</caption>
+            <caption>你的个人基本信息如下 更新于2018/01/10 14:23:00</caption>
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>申请人</th>
-                    <th>申请时间</th>
-                    <th>请假类型</th>
-                    <th>请假时长</th>
-                    <th>当前状态</th>
-                    <th>备注</th>
-                    <th>操作</th>
+                    <th colspan="8" class = "text-primary">个人信息</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
+                    <td class = "text-primary">姓名</td>
                     <td>陈真</td>
-                    <td>2017/12/28</td>
-                    <td>事假</td>
-                    <td>1天</td>
-                    <td>
-                    <button type="button" class="btn btn-xs btn-warning" data-container="body" data-toggle="popover" title="当前状态:<span style = 'color:red;'>待经理审批</span>" data-placement="top" data-html="true" data-content="<span>员工审批---------<span style = 'color:red;'>经理审批</span>---------人事审批--------审批完成</span>">
-                      待经理审批
-                    </button>
-                    </td>
-                    <td>
-                    <button type="button" class="btn btn-xs btn-info" data-container="body" data-toggle="popover" data-placement="left" data-content="回家喝酒">
-                      查看
-                    </button>
-                    </td>
-                    <td><button class ="btn btn-xs btn-primary">同 意</button> <button class ="btn btn-xs btn-danger">退 回</button> </td>
+                    <td class = "text-primary">性别</td>
+                    <td>男</td>
+                    <td class = "text-primary">年龄</td>
+                    <td>23</td>
+                    <td class = "text-primary">出生日期</td>
+                    <td>1993/09/18</td>
                 </tr>
                <tr>
-                   <td>2</td>
-                    <td>陈真</td>
-                    <td>2017/12/28</td>
-                    <td>事假</td>
-                    <td>1天</td>
-                    <td>
-                    <button type="button" class="btn btn-xs btn-warning" data-container="body" data-toggle="popover" title="当前状态:<span style = 'color:red;'>待人事审批</span>" data-placement="top" data-html="true" data-content="<span>员工审批---------经理审批---------<span style = 'color:red;'>人事审批</span>--------审批完成</span>">
-                      待人事审批
-                    </button>
-                    </td>
-                    <td>
-                    <button type="button" class="btn btn-xs btn-info" data-container="body" data-toggle="popover" data-placement="left" data-content="回家吃饭">
-                      查看
-                    </button>
-                    </td>
-                    <td><button class ="btn btn-xs btn-primary">同 意</button> <button class ="btn btn-xs btn-danger">退 回</button> </td>
+                    <td class = "text-primary">联系方式</td>
+                    <td>155****0050</td>
+                    <td class = "text-primary">邮箱地址</td>
+                    <td>1336417143@qq.com</td>
+                    <td class = "text-primary">学历</td>
+                    <td>本科</td>
+                    <td class = "text-primary">毕业院校</td>
+                    <td>武汉纺织大学</td>
                 </tr>
                 <tr>
-                <td>3</td>
-                    <td>陈真</td>
-                    <td>2017/12/28</td>
-                    <td>事假</td>
-                    <td>1天</td>
-                    <td>
-                    <button type="button" class="btn btn-xs btn-warning" data-container="body" data-toggle="popover" title="当前状态:<span style = 'color:red;'>待经理审批</span>" data-placement="top" data-html="true" data-content="<span>员工审批---------<span style = 'color:red;'>经理审批</span>---------人事审批--------审批完成</span>">
-                      待经理审批
-                    </button>
-                    </td>
-                    <td>
-                    <button type="button" class="btn btn-xs btn-info" data-container="body" data-toggle="popover" data-placement="left" data-content="回家喝酒">
-                      查看
-                    </button>
-                    </td>
-                    <td><button class ="btn btn-xs btn-primary">同 意</button> <button class ="btn btn-xs btn-danger">退 回</button> </td>
+                <td class = "text-primary">现住址</td>
+                    <td>湖北省武汉市洪山区</td>
+                <td class = "text-primary">家庭住址</td>
+                    <td colspan="5">湖北省鄂州市**镇**村**号</td>
                 </tr>
+                <tr>
+                    <td class = "text-primary">籍贯</td>
+                    <td>湖北</td>
+                    <td class = "text-primary">身份</td>
+                    <td>群众</td>
+                    <td class = "text-primary">是否已婚</td>
+                    <td>否</td>
+                    <td class = "text-primary">户口类型</td>
+                    <td>农村</td>
+              </tr>
+
+                <tr>
+                <td class = "text-primary">工号</td>
+                    <td>12666</td>
+                    <td class = "text-primary">职位</td>
+                    <td>HR经理</td>
+                    <td class = "text-primary">部门</td>
+                    <td>人事部门</td>
+                    <td class = "text-primary">职位等级</td>
+                    <td>A1</td>
+                </tr>
+
+                <tr>
+                <td class = "text-primary">上级主管</td>
+                    <td>郭*扬</td>
+                    <td class = "text-primary">下属成员</td>
+                    <td>7</td>
+                    <td class = "text-primary">入职日期</td>
+                    <td>2018/01/10</td>
+                    <td class = "text-primary">合同日期</td>
+                    <td>2021/01/10</td>
+                </tr>
+            <tr>
+                    <td class = "text-primary">个人说明</td>
+                    <td colspan="3">无</td>
+                    <td class = "text-primary">其他</td>
+                    <td colspan="3">无</td>
+              </tr>
             </tbody>
         </table>
     </div>
     <div class="tab-pane fade" id="ios">
-        <table class="table table-hover table-bordered table-condensed">
-            <caption>已处理申请 更新于2017/12/28 14:23:00</caption>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>申请人</th>
-                    <th>申请时间</th>
-                    <th>请假类型</th>
-                    <th>请假时长</th>
-                    <th>当前状态</th>
-                    <th>备注</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>陈真</td>
-                    <td>2017/12/28</td>
-                    <td>事假</td>
-                    <td>1天</td>
-                    <td>
-                    <button type="button" class="btn btn-xs btn-success" data-container="body" data-toggle="popover" title="当前状态:<span style = 'color:green;'>已完成</span>" data-placement="top" data-html="true" data-content="<span>员工审批---------经理审批---------人事审批--------<span style = 'color:green;'>审批完成</span></span>">
-                      审批通过
-                    </button>
-                    </td>
-                    <td>
-                    <button type="button" class="btn btn-xs btn-info" data-container="body" data-toggle="popover" data-placement="left" data-content="回家喝酒">
-                      查看
-                    </button>
-                    </td>
 
-                </tr>
-               <tr>
-                   <td>2</td>
-                    <td>陈真</td>
-                    <td>2017/12/28</td>
-                    <td>事假</td>
-                    <td>1天</td>
-                    <td>
-                    <button type="button" class="btn btn-xs btn-danger" data-container="body" data-toggle="popover" title="当前状态:<span style = 'color:red;'>已完成</span>" data-placement="top" data-html="true" data-content="<span>员工审批---------经理审批---------人事审批--------<span style = 'color:red;'>审批失败</span></span>">
-                      审批失败
-                    </button>
-                    </td>
-                    <td>
-                    <button type="button" class="btn btn-xs btn-info" data-container="body" data-toggle="popover" data-placement="left" data-content="回家吃饭">
-                      查看
-                    </button>
-                    </td>
+        <form class = "form1" action="myinfo_submit" method="get" accept-charset="utf-8">
 
-                </tr>
-                <tr>
-                <td>3</td>
-                    <td>陈真</td>
-                    <td>2017/12/28</td>
-                    <td>事假</td>
-                    <td>1天</td>
-                    <td>
-                    <button type="button" class="btn btn-xs btn-success" data-container="body" data-toggle="popover" title="当前状态:<span style = 'color:green;'>已完成</span>" data-placement="top" data-html="true" data-content="<span>员工审批---------经理审批---------人事审批--------<span style = 'color:green;'>审批完成</span></span>">
-                      审批通过
-                    </button>
-                    </td>
-                    <td>
-                    <button type="button" class="btn btn-xs btn-info" data-container="body" data-toggle="popover" data-placement="left" data-content="回家喝酒">
-                      查看
-                    </button>
-                    </td>
+           <div style = "color:#777;padding-top:10px;padding-bottom:10px">你的个人基本信息如下 更新于2018/01/10 14:23:00</div>
+            <!-- 1 content -->
+            <div class="form-inline">
+                <div class="form-group ">
+                    <label for="exampleInputEmail1" class ="inp1">姓名</label>
+                    <input style = "color:blue" type="text" value = "陈真" class="form-control inp2" id="exampleInputEmail1" placeholder="姓名" required="required">
+                </div>
 
-                </tr>
-            </tbody>
-        </table>
+                <div class="form-group">
+                        <label class ="inp1">性别</label>
+                        <div class="btn-group btn-groups inp2">
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                男 <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-left">
+                                <li><a href="#">男</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">女</a></li>
+                              </ul>
+                        </div>
+                </div>
+                <div class="form-group ">
+                        <label for="exampleInputPassword1" class ="inp1">年龄</label>
+                        <input type="text" style = "color:blue" value = "23" class="form-control inp2" id="exampleInputPassword1" placeholder="年龄" required="required">
+                </div>
+
+                <div class="form-group " >
+                        <label for="exampleInputPassword2" class ="inp1" >出生日期</label>
+                        <input type="date" style = "color:blue" value = "1993-09-18" class="form-control inp2" id="exampleInputPassword2" placeholder="出生日期" required="required">
+                </div>
+            </div>
+
+            <!-- 2 content -->
+
+            <div class="form-inline mar-top">
+                <div class="form-group ">
+                    <label for="exampleInputEmail11" class ="inp1">电话</label>
+                    <input type="text" style = "color:blue" value="15549490050" class="form-control inp2" id="exampleInputEmail11" placeholder="手机" required="required">
+                </div>
+
+                <div class="form-group ">
+                        <label class ="inp1">学历</label>
+                        <div class="btn-group btn-groups inp2">
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                本科 <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-left ">
+                                <li><a href="#">本科</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">专科</a></li>
+                                <li><a href="#">博士</a></li>
+                                <li><a href="#">硕士</a></li>
+                              </ul>
+                        </div>
+                </div>
+
+                <div class="form-group " >
+                        <label for="exampleInputPassword22" class ="inp1" >毕业院校</label>
+                        <input type="text" style = "color:blue" value="武汉纺织大学" class="form-control inp2" id="exampleInputPassword22" placeholder="毕业院校" required="required">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail12" class ="inp1">邮箱</label>
+                    <input type="email" style = "color:blue" value="1336417143@qq.com" class="form-control inp2" id="exampleInputEmail12" placeholder="邮箱" required="required">
+
+                </div>
+            </div>
+
+            <!-- 3 content -->
+
+            <div class="form-inline mar-top">
+                <div class="form-group ">
+                    <label for="exampleInputEmail1111" class ="inp1">籍贯</label>
+                    <input type="text" style = "color:blue" value = "湖北鄂州" class="form-control inp2" id="exampleInputEmail1111" placeholder="籍贯" required="required">
+                </div>
+
+
+
+
+            <div class="form-group ">
+                            <label class ="inp1">身份</label>
+                            <div class="btn-group btn-groups inp2">
+                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    群众 <span class="caret"></span>
+                                  </button>
+                                  <ul class="dropdown-menu dropdown-menu-left ">
+                                    <li><a href="#">群众</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">团员</a></li>
+                                    <li><a href="#">党员</a></li>
+                                  </ul>
+                            </div>
+                    </div>
+
+              <div class="form-group ">
+                <label for="exampleInputEmail111" class ="inp1">住址</label>
+                <input type="text" style = "color:blue" value = "武汉市洪山区" class="form-control inp2" id="exampleInputEmail111" placeholder="现住址" required="required">
+            </div>
+
+            </div>
+
+
+            <!-- 3 content -->
+
+            <div class="form-inline mar-top">
+
+             <div class="form-group">
+                    <label for="exampleInputEmail122" class ="inp1">家庭详细住址</label>
+                    <input type="text" style = "color:blue" value = "湖北省鄂州市**镇**村**号" class="form-control inp2" id="exampleInputEmail122" placeholder="家庭住址" required="required">
+
+                </div>
+
+            <div class="form-group ">
+                            <label class ="inp1">婚姻</label>
+                            <div class="btn-group btn-groups inp2">
+                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    未婚<span class="caret"></span>
+                                  </button>
+                                  <ul class="dropdown-menu dropdown-menu-left ">
+                                    <li><a href="#">已婚</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">已婚</a></li>
+                                    <li><a href="#">未婚</a></li>
+                                  </ul>
+                            </div>
+             </div>
+
+             <div class="form-group ">
+                            <label class ="inp1">户口类型</label>
+                            <div class="btn-group btn-groups inp2">
+                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    农村户口 <span class="caret"></span>
+                                  </button>
+                                  <ul class="dropdown-menu dropdown-menu-left ">
+                                    <li><a href="#">农村户口</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">城镇户口</a></li>
+                                  </ul>
+                            </div>
+                    </div>
+
+            </div>
+
+            <!-- 4 content -->
+
+            <div class="form-inline mar-top">
+             <div class="form-group ">
+             <label for="exampleInputEmail1222" class ="inp1">个人说明</label>
+             <textarea rows="3" style = "color:blue" cols="100" class = "form-control" name="froms">我很帅...</textarea>
+            </div>
+            </div>
+            <div class="form-inline mar-top1">
+                  <button type="submit" class="btn btn-primary">保 存</button>
+                  <button type="reset" class="btn btn-danger btn-froms">重 置</button>
+
+            </div>
+        </form>
+
     </div>
 </div>
 

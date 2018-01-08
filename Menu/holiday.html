@@ -12,6 +12,15 @@
     nav{
         max-width:1094px;background-color:#a9a8a8;color:white;height:24px;line-height:24px;padding-left:10px;font-size:13px;
     }
+    #myTab{height:35px;}
+    #myTab li{height:35px;}
+    #myTab a{height:35px;padding: 7px 15px;}
+    .cont1{max-width:1094px;padding: 10px;}
+    #myTabContent{min-height:400px;padding:10px;border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc;}
+
+    table th{text-align:center;}
+    table td{text-align:center;}
+    .status{color:red;}
     </style>
 </head>
 <body>
@@ -21,32 +30,160 @@
 <nav>
     <span>假期审批</span>
 </nav>
-
-<ul id="myTab" class="nav nav-tabs">
+<div class="cont1">
+    <ul id="myTab" class="nav nav-tabs">
     <li class="active">
         <a href="#home" data-toggle="tab">
-            待审批
+            待审批 <span class="badge ">3</span>
         </a>
+
     </li>
-    <li><a href="#ios" data-toggle="tab">已审批</a></li>
+    <li><a href="#ios" data-toggle="tab">已审批</a> </li>
 </ul>
 <div id="myTabContent" class="tab-content">
     <div class="tab-pane fade in active" id="home">
-        <p>菜鸟教程是一个提供最新的web技术站点，本站免费提供了建站相关的技术文档，帮助广大web技术爱好者快速入门并建立自己的网站。菜鸟先飞早入行——学的不仅是技术，更是梦想。</p>
+        <table class="table table-hover table-bordered table-condensed">
+            <caption>待审批事件,请尽快处理 更新于2017/12/28 14:23:00</caption>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>申请人</th>
+                    <th>申请时间</th>
+                    <th>请假类型</th>
+                    <th>请假时长</th>
+                    <th>当前状态</th>
+                    <th>备注</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>陈真</td>
+                    <td>2017/12/28</td>
+                    <td>事假</td>
+                    <td>1天</td>
+                    <td>
+                    <a tabindex="0" class="btn btn-xs btn-warning" role="button" data-toggle="popover" data-trigger="focus" title="当前状态:<span style = 'color:red;'>待经理审批</span>" data-placement="top" data-html="true" data-content="<span>员工审批---------<span style = 'color:red;'>经理审批</span>---------人事审批--------审批完成</span>">待经理审批</a>
+                    </td>
+                    <td>
+                    <a tabindex="0" class="btn btn-xs btn-info" role="button" data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" data-content="回家喝酒">查看</a>
+
+                    </td>
+                    <td><button class ="btn btn-xs btn-primary">同 意</button> <button class ="btn btn-xs btn-danger">退 回</button> </td>
+                </tr>
+               <tr>
+                   <td>2</td>
+                    <td>陈真</td>
+                    <td>2017/12/28</td>
+                    <td>事假</td>
+                    <td>1天</td>
+                    <td>
+                    <a tabindex="0" class="btn btn-xs btn-warning" role="button" data-toggle="popover" data-trigger="focus" title="当前状态:<span style = 'color:red;'>待人事审批</span>" data-placement="top" data-html="true" data-content="<span>员工审批---------经理审批---------<span style = 'color:red;'>人事审批</span>--------审批完成</span>">待人事审批</a>
+                    </td>
+                    <td>
+                    <a tabindex="0" class="btn btn-xs btn-info" role="button" data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" data-content="回家吃饭">查看</a>
+
+                    </td>
+                    <td><button class ="btn btn-xs btn-primary">同 意</button> <button class ="btn btn-xs btn-danger">退 回</button> </td>
+                </tr>
+                <tr>
+                <td>3</td>
+                    <td>陈真</td>
+                    <td>2017/12/28</td>
+                    <td>事假</td>
+                    <td>1天</td>
+                    <td>
+
+                    <a tabindex="0" class="btn btn-xs btn-warning" role="button" data-toggle="popover" data-trigger="focus" title="当前状态:<span style = 'color:red;'>待经理审批</span>" data-placement="top" data-html="true" data-content="<span>员工审批---------<span style = 'color:red;'>经理审批</span>---------人事审批--------审批完成</span>">待经理审批</a>
+
+
+                    </td>
+                    <td>
+                    <a tabindex="0" class="btn btn-xs btn-info" role="button" data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" data-content="回家喝酒">查看</a>
+
+                    </td>
+                    <td><button class ="btn btn-xs btn-primary">同 意</button> <button class ="btn btn-xs btn-danger">退 回</button> </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <div class="tab-pane fade" id="ios">
-        <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple
-            TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+        <table class="table table-hover table-bordered table-condensed">
+            <caption>已处理申请 更新于2017/12/28 14:23:00</caption>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>申请人</th>
+                    <th>申请时间</th>
+                    <th>请假类型</th>
+                    <th>请假时长</th>
+                    <th>当前状态</th>
+                    <th>备注</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>陈真</td>
+                    <td>2017/12/28</td>
+                    <td>事假</td>
+                    <td>1天</td>
+                    <td>
+                    <a tabindex="0" class="btn btn-xs btn-success" role="button" data-toggle="popover" data-trigger="focus" title="当前状态:<span style = 'color:green;'>已完成</span>" data-placement="top" data-html="true" data-content="<span>员工审批---------经理审批---------人事审批--------<span style = 'color:green;'>审批完成</span></span>">审批通过</a>
+                    </td>
+                    <td>
+                    <a tabindex="0" class="btn btn-xs btn-info" role="button" data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" data-content="回家吃饭">查看</a>
+                    </td>
+
+                </tr>
+               <tr>
+                   <td>2</td>
+                    <td>陈真</td>
+                    <td>2017/12/28</td>
+                    <td>事假</td>
+                    <td>1天</td>
+                    <td>
+                    <a tabindex="0" class="btn btn-xs btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="当前状态:<span style = 'color:red;'>已完成</span>" data-placement="top" data-html="true" data-content="<span>员工审批---------经理审批---------人事审批--------<span style = 'color:red;'>审批失败</span></span>">审批失败</a>
+                    </td>
+                    <td>
+                    <a tabindex="0" class="btn btn-xs btn-info" role="button" data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" data-content="回家吃饭">查看</a>
+                    </td>
+
+                </tr>
+                <tr>
+                <td>3</td>
+                    <td>陈真</td>
+                    <td>2017/12/28</td>
+                    <td>事假</td>
+                    <td>1天</td>
+                    <td>
+
+                    <a tabindex="0" class="btn btn-xs btn-success" role="button" data-toggle="popover" data-trigger="focus" title="当前状态:<span style = 'color:green;'>已完成</span>" data-placement="top" data-html="true" data-content="<span>员工审批---------经理审批---------人事审批--------<span style = 'color:green;'>审批完成</span></span>">审批通过</a>
+
+                    </td>
+                    <td>
+
+                    <a tabindex="0" class="btn btn-xs btn-info" role="button" data-toggle="popover" data-trigger="focus" data-placement="left" data-html="true" data-content="回家喝酒">查看</a>
+
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 
-
-
+</div>
 </body>
 <script src="js/jquery.2.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript">
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
 
+$('#example').popover()
 
 </script>
 </html>
